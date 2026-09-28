@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f2efe6">
+<title>GRAMMAR PRO USE 2026 — ULTIMATE ACID DRILL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@500;700;900&family=Oswald:wght@500;700&family=Pixelify+Sans:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+:root{
+--bg:#efece2;--panel:#fff;--black:#000;--yellow:#eee62b;--pink:#c010c0;--cyan:#5b86ff;--green:#33d160;--purple:#3b22c9;--orange:#ff5a1f;--red:#e5262d;
+--grey:#c9c6bc;--navy:#0a1fa0;
+--border:3px solid #000;--shadow-sm:3px 3px 0 #000;--shadow:5px 5px 0 #000;--shadow-lg:8px 8px 0 #000;
+--bevel:inset 2px 2px 0 rgba(255,255,255,.85),inset -2px -2px 0 rgba(0,0,0,.28);
+--disp:'Oswald','Impact',sans-serif;--ui:'Golos Text',system-ui,sans-serif;--pix:'Pixelify Sans','Courier New',monospace;--serif:'Playfair Display',Georgia,serif;
+}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background-color:var(--bg);background-image:radial-gradient(rgba(0,0,0,.2) 1.2px,transparent 1.6px);background-size:8px 8px;color:#000;font-family:var(--ui);-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:60px}
+button,input{font:inherit}
+button{cursor:pointer;user-select:none}
+body .font-mono{font-family:var(--pix)}
+:focus-visible{outline:3px solid var(--pink);outline-offset:2px}
+
+.ticker-wrap{background:#000;color:var(--yellow);padding:6px 0;font-family:var(--pix);font-size:18px;letter-spacing:1px;overflow:hidden;white-space:nowrap;border-bottom:var(--border);position:relative;z-index:20}
+.ticker{display:inline-block;animation:marquee 24s linear infinite}
+.ticker-wrap:hover .ticker{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+.app-container{max-width:1140px;margin:0 auto;padding:16px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--grey);border:var(--border);box-shadow:var(--shadow),var(--bevel);padding:10px 14px;margin-bottom:24px;flex-wrap:wrap}
+.brand{font-family:var(--disp);font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.brand-badge{background:var(--pink);color:#fff;padding:2px 8px;font-family:var(--pix);font-size:14px;font-weight:400;border:2px solid #000;transform:rotate(-2deg);box-shadow:2px 2px 0 #000}
+.stats-group{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.stat-pill,.sound-toggle,.mascot-pill{border:2px solid;border-color:#777 #fff #fff #777;background:#fff;padding:3px 10px;font-family:var(--pix);font-size:16px;font-weight:700}
+.sound-toggle{background:var(--cyan);border-color:#fff #000 #000 #fff;box-shadow:2px 2px 0 #000}
+.mascot-pill{background:var(--green)}
+
+.hero{background:var(--yellow);border:var(--border);box-shadow:var(--shadow-lg);padding:32px;position:relative;overflow:hidden;margin-bottom:34px;isolation:isolate}
+.hero::before{content:"grammar_pro_use_2026.exe";display:block;margin:-32px -32px 26px;padding:4px 10px;background:linear-gradient(90deg,var(--navy),#1f7ad8);color:#fff;font-family:var(--pix);font-size:15px;border-bottom:var(--border)}
+.hero>*{position:relative;z-index:2}
+.hero>.sticker,.hero>.hero-bg-text{position:absolute;pointer-events:none}
+.hero-bg-text{right:-1%;bottom:-.12em;z-index:0!important;font-family:var(--disp);font-weight:700;font-size:clamp(120px,22vw,300px);line-height:.8;color:transparent;-webkit-text-stroke:2px var(--pink);opacity:.5}
+.hero>.disco{z-index:1;width:200px;aspect-ratio:1;border-radius:50%;right:-24px;top:64px;border:3px solid #000;box-shadow:inset -14px -14px 0 rgba(0,0,0,.28);background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.95) 0 7%,transparent 28%),repeating-linear-gradient(0deg,transparent 0 13px,#000 13px 15px),repeating-linear-gradient(90deg,transparent 0 13px,#000 13px 15px),radial-gradient(circle at 35% 30%,#fff,#b9c2c9 45%,#4b5560)}
+.hero>.win{z-index:3;right:28px;bottom:26px;width:262px;background:var(--grey);border:3px solid #000;box-shadow:5px 5px 0 #000;transform:rotate(3deg)}
+.win-bar{background:var(--navy);color:#fff;font-family:var(--pix);font-size:13px;padding:2px 6px;display:flex;justify-content:space-between}
+.win-body{background:#fff;margin:4px;padding:10px 12px;font-family:var(--serif);font-size:16px;line-height:1.6;font-weight:700}
+.blank{background:var(--yellow);border:2px solid #000;padding:0 4px;font-family:var(--pix);font-size:14px;font-weight:400;text-transform:uppercase}
+.hero>.cursor{z-index:4;right:64px;bottom:14px;filter:drop-shadow(3px 3px 0 #000)}
+.hero-tag{display:inline-block;background:var(--cyan);color:#000;border:2px solid #000;padding:2px 10px;font-family:var(--pix);font-size:17px;margin-bottom:14px;transform:rotate(-1deg);box-shadow:2px 2px 0 #000}
+.hero h1{font-family:var(--disp);font-weight:700;text-transform:uppercase;font-size:clamp(56px,11vw,140px);line-height:.88;margin:0 0 20px}
+.hero h1 .highlight{background:var(--pink);color:var(--yellow);padding:0 .14em;border:3px solid #000;box-shadow:6px 6px 0 #000;font-size:.56em;display:inline-block;transform:rotate(-1.5deg);margin-top:.18em;line-height:1.05}
+.hero-note{background:#fff;border:2px dashed #000;padding:12px 14px;max-width:42rem;margin:0 0 22px;font-family:var(--ui);font-size:15px;line-height:1.55}
+
+.filter-bar{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap}
+.filter-btn{background:var(--grey);border:var(--border);padding:8px 14px;font-family:var(--ui);font-weight:900;font-size:14px;box-shadow:var(--shadow-sm),var(--bevel);transition:transform .12s,box-shadow .12s,background .12s}
+.filter-btn.active{background:var(--pink);color:#fff;transform:translate(2px,2px);box-shadow:1px 1px 0 #000,inset 3px 3px 0 rgba(0,0,0,.3)}
+.filter-btn:hover:not(.active){background:var(--yellow)}
+.section-title{font-family:var(--disp);font-weight:700;font-size:clamp(34px,5vw,56px);line-height:.95;text-transform:uppercase;margin:0 0 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.section-badge{background:#000;color:var(--green);font-family:var(--pix);font-size:16px;font-weight:400;padding:3px 8px}
+
+.path-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:26px 22px}
+.unit-card{background:#fff;border:var(--border);box-shadow:var(--shadow);padding:0 18px 18px;display:flex;flex-direction:column;position:relative;transition:transform .2s cubic-bezier(.2,0,0,1),box-shadow .2s ease}
+.unit-card::before{content:"unit.exe";display:block;margin:0 -18px 14px;padding:3px 8px;background:var(--navy);color:#fff;font-family:var(--pix);font-size:13px;border-bottom:var(--border)}
+.unit-card::after{content:"_ ▫ ×";position:absolute;top:3px;right:8px;color:#fff;font-family:var(--pix);font-size:13px;letter-spacing:3px}
+.unit-card:nth-child(4n+2)::before{background:var(--pink)}
+.unit-card:nth-child(4n+3)::before{background:#0b7a35}
+.unit-card:nth-child(4n)::before{background:var(--red)}
+.unit-card:hover{transform:translate(-4px,-4px);box-shadow:9px 9px 0 #000}
+.unit-num{font-family:var(--disp);font-weight:700;font-size:46px;line-height:.85;text-transform:uppercase}
+.unit-card h3{font-family:var(--ui);font-weight:900;font-size:19px;margin:14px 0 6px;line-height:1.2}
+.unit-card p{font-family:var(--ui);font-size:14px;color:#333;margin:0 0 16px;flex-grow:1;line-height:1.45}
+
+.acid-btn{background:var(--yellow);color:#000;border:var(--border);box-shadow:var(--shadow-sm),var(--bevel);padding:10px 18px;font-family:var(--ui);font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:.4px;transition:transform .1s,box-shadow .1s,background .15s;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.acid-btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 #000,var(--bevel);background:var(--cyan)}
+.acid-btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 #000}
+.acid-btn.pink{background:var(--pink);color:#fff}
+.acid-btn.pink:hover{background:#fff;color:#000}
+.acid-btn.purple{background:var(--purple);color:#fff}
+.acid-btn.purple:hover{background:var(--yellow);color:#000}
+.acid-btn.secondary{background:#fff}
+.acid-btn.secondary:hover{background:var(--pink);color:#fff}
+
+.overlay{position:fixed;inset:0;background:rgba(18,8,70,.86);background-image:radial-gradient(rgba(255,255,255,.16) 1px,transparent 1.5px);background-size:6px 6px;z-index:100;display:none;align-items:center;justify-content:center;padding:16px}
+.overlay.show{display:flex;animation:popIn .2s cubic-bezier(.175,.885,.32,1.275)}
+@keyframes popIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+.modal-window{width:min(920px,100%);background:var(--grey);border:4px solid #000;box-shadow:12px 12px 0 #000;max-height:94vh;overflow-y:auto;position:relative;display:flex;flex-direction:column}
+.modal-header-bar{background:linear-gradient(90deg,var(--navy),#1f7ad8);color:#fff;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;font-family:var(--pix);font-size:18px;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:5}
+.back-nav-btn{background:var(--grey);color:#000;border:2px solid #000;padding:3px 12px;font-family:var(--ui);font-size:13px;font-weight:900;box-shadow:2px 2px 0 #000,var(--bevel);transition:transform .1s}
+.back-nav-btn:hover{transform:translate(-1px,-1px);background:var(--yellow)}
+.modal-header-bar .modal-close-btn{background:var(--red);color:#fff;border:2px solid #000;padding:3px 10px;font-family:var(--pix);box-shadow:2px 2px 0 #000}
+.modal-body{padding:22px;position:relative}
+
+.deck-status-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;background:#fff;border:2px solid;border-color:#777 #fff #fff #777;padding:8px 12px;font-family:var(--pix);font-size:17px;flex-wrap:wrap;gap:10px}
+.deck-pill{background:var(--cyan);color:#000;border:2px solid #000;padding:1px 8px;box-shadow:2px 2px 0 #000}
+.deck-pill.remaining{background:var(--orange)}
+.deck-pill.mastered{background:var(--green)}
+
+.task-card-container{perspective:1200px;margin-bottom:20px}
+.task-card{background:#fff;border:var(--border);box-shadow:var(--shadow-lg);padding:24px;position:relative;transform-style:preserve-3d;transition:transform .4s cubic-bezier(.175,.885,.32,1.275)}
+.task-card.fly-back-anim{animation:cardFlyBack .65s cubic-bezier(.2,.8,.2,1) forwards}
+.task-card.mastered-anim{animation:cardMastered .55s ease forwards}
+@keyframes cardFlyBack{0%{transform:translate3d(0,0,0) rotate(0) scale(1);opacity:1}35%{transform:translate3d(180px,-80px,-100px) rotate(18deg) scale(.8);opacity:.8}70%{transform:translate3d(-120px,40px,-200px) rotate(-12deg) scale(.6);opacity:.5}100%{transform:translate3d(0,0,0) rotate(0) scale(1);opacity:1}}
+@keyframes cardMastered{0%{transform:translateY(0) scale(1);opacity:1}50%{transform:translateY(-40px) scale(1.05) rotate(3deg);opacity:.9}100%{transform:translateY(-100px) scale(.8) rotate(-10deg);opacity:0}}
+.task-format-tag{display:inline-block;background:#000;color:var(--yellow);font-family:var(--pix);font-size:16px;padding:2px 8px;margin-bottom:12px}
+.task-format-tag.wf{background:var(--pink);color:#fff}
+.ru-sentence{font-family:var(--serif);font-size:22px;font-weight:700;font-style:italic;margin:0 0 16px;line-height:1.5;color:#7d0085;background:var(--yellow);display:inline;box-shadow:5px 0 0 var(--yellow),-5px 0 0 var(--yellow);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+
+.hint-banner{display:none;background:#fffbd0;border:2px solid #000;padding:12px 16px;margin:16px 0;box-shadow:3px 3px 0 #000;font-family:var(--ui);font-size:14px;line-height:1.55;position:relative}
+.hint-banner.show{display:block;animation:popIn .25s ease}
+.hint-title{font-family:var(--pix);font-size:18px;color:var(--purple);font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.interaction-area{margin:20px 0;padding:16px;border:3px dashed #000;background:#faf8f2;min-height:100px}
+
+/* Syntax Builder UI */
+.drop-zone{min-height:70px;padding:10px;border:2px dashed #000;background:#fff;display:flex;gap:8px;align-items:center;flex-wrap:wrap;transition:all .2s ease;margin-bottom:14px}
+.drop-zone.drag-over{background:#e0ffe5;border-style:solid;border-color:var(--green)}
+.drop-placeholder{font-family:var(--pix);font-size:17px;color:#666;pointer-events:none}
+.bank-header-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.bank-label{font-family:var(--ui);font-size:13px;font-weight:900;text-transform:uppercase}
+.word-bank{display:flex;gap:8px;flex-wrap:wrap;min-height:44px}
+.word-chip{user-select:none;touch-action:none;cursor:pointer;background:#fff;border:2px solid #000;padding:6px 12px;font-family:var(--ui);font-weight:700;font-size:15px;box-shadow:3px 3px 0 #000;transition:transform .15s,box-shadow .15s,background .15s}
+.word-chip:hover{transform:translate(-2px,-2px) rotate(-1deg);box-shadow:5px 5px 0 #000;background:var(--yellow)}
+.word-chip.dragging{opacity:.2}
+.word-chip.placed{background:var(--cyan);animation:popInChip .2s ease}
+@keyframes popInChip{0%{transform:scale(.6);opacity:0}100%{transform:scale(1);opacity:1}}
+.word-chip.drag-ghost{position:fixed;z-index:1000;pointer-events:none;transform:translate(-50%,-50%) rotate(-4deg) scale(1.08);box-shadow:8px 8px 0 #000;background:var(--pink);color:#fff}
+
+/* Word Formation Specialized UI */
+.wf-container{display:flex;flex-direction:column;gap:14px}
+.wf-sentence-box{background:#fff;border:2px solid #000;padding:16px;box-shadow:3px 3px 0 #000;font-family:var(--serif);font-size:20px;line-height:1.55}
+.wf-gap-highlight{display:inline-block;padding:2px 10px;background:var(--yellow);border:2px solid #000;color:var(--pink);font-family:var(--pix);font-weight:700;font-size:22px;box-shadow:2px 2px 0 #000;text-transform:uppercase}
+.base-word-card{display:flex;align-items:center;justify-content:space-between;background:var(--navy);color:#fff;padding:10px 16px;border:2px solid #000;box-shadow:3px 3px 0 #000;flex-wrap:wrap;gap:10px}
+.base-label{font-family:var(--pix);font-size:15px;letter-spacing:1px;color:var(--yellow)}
+.base-word-value{font-family:var(--disp);font-size:30px;letter-spacing:2px;background:var(--pink);color:var(--yellow);padding:2px 14px;border:2px solid #fff;transform:rotate(-1deg);box-shadow:2px 2px 0 #000}
+.wf-input-wrapper{display:flex;gap:10px;align-items:center}
+.wf-input{width:100%;padding:12px 16px;font-family:var(--pix);font-size:22px;font-weight:700;letter-spacing:1px;text-transform:uppercase;border:3px solid #000;background:#fff;box-shadow:4px 4px 0 #000;outline:none;transition:border-color .15s,box-shadow .15s}
+.wf-input:focus{border-color:var(--pink);box-shadow:5px 5px 0 var(--pink)}
+.suffix-helper-bar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:6px}
+.helper-chip{background:#fff;border:2px solid #000;padding:4px 10px;font-family:var(--pix);font-size:14px;font-weight:700;box-shadow:2px 2px 0 #000;cursor:pointer;transition:transform .1s,background .1s}
+.helper-chip:hover{background:var(--cyan);transform:translate(-1px,-1px)}
+.helper-chip.action-btn{background:var(--yellow)}
+
+.fx-particle{position:fixed;pointer-events:none;z-index:2000;font-size:22px;animation:floatFade .65s cubic-bezier(.1,.8,.3,1) forwards}
+@keyframes floatFade{0%{opacity:1;transform:translate(0,0) scale(1) rotate(0)}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.6) rotate(180deg)}}
+.xp-pop{position:absolute;right:20px;top:-10px;font-family:var(--pix);font-weight:700;font-size:30px;color:#000;background:var(--yellow);border:2px solid #000;padding:2px 12px;box-shadow:4px 4px 0 #000;pointer-events:none;animation:xpRise .8s cubic-bezier(.175,.885,.32,1.275) forwards;z-index:50}
+@keyframes xpRise{0%{opacity:0;transform:translateY(10px) scale(.5)}50%{opacity:1;transform:translateY(-25px) scale(1.2)}100%{opacity:0;transform:translateY(-45px) scale(1)}}
+
+.controls-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:18px;flex-wrap:wrap}
+.status-msg{font-family:var(--pix);font-size:20px;font-weight:700}
+.status-msg.ok{color:#007a12;background:#e0ffe5;padding:4px 10px;border:2px solid #000}
+.status-msg.bad{color:#b3121a;background:#ffe0e0;padding:4px 10px;border:2px solid #000}
+
+.result-screen{display:none;text-align:center;padding:40px 20px;background:var(--yellow);border:3px solid #000;box-shadow:8px 8px 0 #000;margin-top:20px}
+.result-screen.show{display:block;animation:popIn .3s ease}
+.result-screen h3{font-family:var(--disp);font-weight:700;font-size:clamp(34px,6vw,60px);line-height:1;text-transform:uppercase;color:var(--pink);margin:0 0 10px}
+
+@media(max-width:900px){.hero>.win,.hero>.cursor{display:none}.hero>.disco{width:96px;right:-20px;top:50px}}
+@media(max-width:640px){.app-container{padding:10px}.hero{padding:20px}.hero::before{margin:-20px -20px 18px}.modal-body{padding:14px}.ru-sentence{font-size:18px}.word-chip{padding:5px 9px;font-size:13px}.brand{font-size:24px}.wf-sentence-box{font-size:17px}.base-word-value{font-size:24px}.wf-input{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.ticker{animation:none}.overlay.show,.hint-banner.show,.result-screen.show{animation:none}}
+</style>
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    ⚡ GRAMMAR PRO USE EDITION 2026 🔥 LEITNER DECK SYSTEM 👁️ TASKS 19-24, 25-29, 30-36 ⚛️ ZERO ERROR POLICY 🚨 DEDICATED WORD FORMATION DRILL 🌀 
+    ⚡ GRAMMAR PRO USE EDITION 2026 🔥 LEITNER DECK SYSTEM 👁️ TASKS 19-24, 25-29, 30-36 ⚛️ ZERO ERROR POLICY 🚨 DEDICATED WORD FORMATION DRILL 🌀
+  </div>
+</div>
+
+<main class="app-container">
+  <header class="topbar">
+    <div class="brand">
+      <span>GP USE 2026</span>
+      <span class="brand-badge">ACID LEITNER v4.5</span>
+    </div>
+    <div class="stats-group">
+      <button class="sound-toggle" id="soundBtn" onclick="toggleSound()">🔊 SOUND: ON</button>
+      <div class="mascot-pill" id="mascotBadge">😎 READY FOR DRILL</div>
+      <div class="stat-pill">🔥 STREAK: <span id="streak">7</span>D</div>
+      <div class="stat-pill">⚡ XP: <span id="xp">620</span></div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg-text" aria-hidden="true">USE 2026</div>
+    <div class="sticker disco" aria-hidden="true"></div>
+    <div class="sticker win" aria-hidden="true">
+      <div class="win-bar"><span>wordform.exe</span><span>_ ▫ ×</span></div>
+      <div class="win-body">DEVELOP -> <span class="blank">DEVELOPMENT</span></div>
+    </div>
+    <svg class="sticker cursor" viewBox="0 0 24 32" width="56" height="74" aria-hidden="true"><path d="M2 2v22l6-5 4 9 4-2-4-9h8z" fill="#fff" stroke="#000" stroke-width="2"/></svg>
+    <div class="hero-tag">👁️ 12 МОДУЛЕЙ · 240 ТРЕНИРОВОЧНЫХ КАРТОЧЕК</div>
+    <h1>ЕГЭ АНГЛИЙСКИЙ <br><span class="highlight">БЛОЧНЫЙ ТРЕНАЖЁР</span></h1>
+    <p class="hero-note">
+      💡 <b>Обновленный формат:</b> <br>
+      • <b>Блок 25–29 (Словообразование):</b> Выделенный режим с исходным словом (ROOT WORD), превью-пропуском и быстрыми аффиксами.<br>
+      • <b>Блок 19–24 и 30–36 (Синтаксис &amp; Лексика):</b> Конструктор синтаксиса с токенами.<br>
+      • <b>Улучшенные подсказки:</b> Полный разбор грамматических правил, аффиксов и орфографии!
+    </p>
+    <div class="flex gap-3 flex-wrap">
+      <button class="acid-btn pink" onclick="openLesson(5)">🔤 Словообразование (25-29)</button>
+      <button class="acid-btn secondary" onclick="scrollToUnits()">📂 Все 12 Модулей</button>
+    </div>
+  </section>
+
+  <section id="units">
+    <div class="filter-bar">
+      <button class="filter-btn active" id="filterAll" onclick="filterCategory('all')">⚡ ВСЕ 12 МОДУЛЕЙ</button>
+      <button class="filter-btn" id="filterA" onclick="filterCategory('blockA')">📘 БЛОК 19–24 (Грамматика)</button>
+      <button class="filter-btn" id="filterB" onclick="filterCategory('blockB')">📙 БЛОК 25–29 (Словообразование)</button>
+      <button class="filter-btn" id="filterC" onclick="filterCategory('blockC')">📕 БЛОК 30–36 &amp; СИНТАКСИС</button>
+    </div>
+
+    <div class="section-title">
+      <span id="categoryTitle">ПРОГРАММА МОДУЛЕЙ</span>
+      <span class="section-badge" id="categoryBadge">12 UNITS / DEDICATED FORMATS</span>
+    </div>
+
+    <div class="path-grid" id="unitsContainer"></div>
+  </section>
+</main>
+
+<!-- Interactive Modal -->
+<div class="overlay" id="overlay">
+  <div class="modal-window">
+    <div class="modal-header-bar">
+      <div class="flex items-center gap-3">
+        <button class="back-nav-btn" onclick="closeLesson()">⬅️ К ВЫБОРУ МОДУЛЕЙ</button>
+        <span id="modalLabel">MOD 01 · TENSES</span>
+      </div>
+      <button class="modal-close-btn font-mono font-bold bg-red-600 text-white px-2 py-0.5 border border-white hover:bg-red-500" onclick="closeLesson()">✕ ESC</button>
+    </div>
+
+    <div class="modal-body" id="modalBody">
+      <div class="deck-status-bar">
+        <div>
+          <span>КАРТОЧКА: </span>
+          <span class="deck-pill" id="cardProgress">1 из 20</span>
+        </div>
+        <div>
+          <span>ОСТАЛОСЬ В КОЛОДЕ: </span>
+          <span class="deck-pill remaining" id="deckRemaining">20</span>
+        </div>
+        <div>
+          <span>ОТРАБОТАНО: </span>
+          <span class="deck-pill mastered" id="deckMastered">0 / 20</span>
+        </div>
+      </div>
+
+      <div id="taskArea" class="task-card-container">
+        <div class="task-card" id="activeCard">
+          <div class="task-format-tag" id="taskFormatTag">КОНСТРУКТОР СИНТАКСИСА</div>
+          <br>
+          <div class="ru-sentence" id="ruSentence"></div>
+
+          <!-- Interactive Hint Box -->
+          <div class="hint-banner" id="hintBanner">
+            <div class="hint-title">💡 РАЗБОР И ПОДСКАЗКА:</div>
+            <div id="hintText"></div>
+          </div>
+
+          <!-- Dynamic Interaction Area -->
+          <div class="interaction-area" id="interactionArea"></div>
+
+          <div class="controls-row">
+            <div class="status-msg" id="status"></div>
+            <div class="flex gap-2">
+              <button class="acid-btn purple" id="hintBtn" onclick="manualTakeHint()">💡 ПОДСКАЗКА</button>
+              <button class="acid-btn" id="checkBtn" onclick="checkAnswer()">ПРОВЕРИТЬ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Completion Result Screen -->
+      <div class="result-screen" id="result">
+        <h3>МОДУЛЬ ИДЕАЛЬНО ОТРАБОТАН! 🎉</h3>
+        <p id="resultText" class="font-mono text-lg mb-2"></p>
+        <p class="font-mono text-sm text-gray-800">Все карточки пройдены без единой активной ошибки!</p>
+        <div id="resultXp" style="font-family:'Pixelify Sans', monospace; font-size:42px; margin:16px 0;"></div>
+        <button class="acid-btn pink" onclick="closeLesson()">⬅️ ВЕРНУТЬСЯ К МОДУЛЯМ</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function scrollToUnits() {
+  document.getElementById('units').scrollIntoView({ behavior: 'smooth' });
+}
+
+// База данных 12 модулей с подробными детальными подсказками и выделенным форматом словообразования
+const rawLessons = [
+  {
+    title: "Личные формы глагола (Tenses Active)",
+    label: "01 · TENSES ACTIVE (ЕГЭ 19-24)",
+    desc: "20 заданий: Past Perfect, Present Perfect Continuous, Future Continuous и временные маркеры.",
+    block: "blockA",
+    items: [
+      ["К тому времени как он приехал, мы ушли.", "By the time he arrived we had left", "have leave leaves", "<b>Правило:</b> Past Perfect (had + V3) выражает действие, завершившееся РАНЕЕ другого события в прошлом. Маркер: <i>By the time...</i>"],
+      ["Завтра в пять я буду спать.", "Tomorrow at five I will be sleeping", "am sleep slept", "<b>Правило:</b> Future Continuous (will be + V-ing) указывают на процесс, происходящий в точный момент в будущем (Tomorrow at 5)."],
+      ["Он работает здесь уже несколько лет.", "He has been working here for years", "works is work", "<b>Правило:</b> Present Perfect Continuous (has/have been + V-ing) описывает действие, начавшееся в прошлом и продолжающееся до сих пор. Маркер: <i>for years</i>."],
+      ["Она обычно пьет кофе по утрам.", "She usually drinks coffee in the morning", "drink drinking drank", "<b>Правило:</b> Present Simple (V1/V-s) используется для регулярных действий и привычек. Маркер: <i>usually</i>."],
+      ["Я читал, когда ты мне позвонил.", "I was reading when you called me", "am read reads", "<b>Правило:</b> Past Continuous (was/were + V-ing) показывает длительное действие в прошлом, прерванное коротким фактом (called)."],
+      ["Они уже закончили свою домашнюю работу.", "They have already finished their homework", "did finish finishing", "<b>Правило:</b> Present Perfect (has/have + V3) выражает результат к настоящему моменту. Маркер: <i>already</i>."],
+      ["Поезд отправляется в шесть завтра.", "The train leaves at six tomorrow", "leave leaving left", "<b>Правило:</b> Present Simple используется для выражения строгого расписания транспорта и мероприятий."],
+      ["Мы завершили это до того, как он пришел.", "We had completed it before he came", "have complete completely", "<b>Правило:</b> Past Perfect (had + V3) описывает действие, случившееся до другого прошедшего действия."],
+      ["Я закончу работу к следующему понедельнику.", "I will have finished work by next Monday", "am finish finished", "<b>Правило:</b> Future Perfect (will have + V3) обозначает действие, которое завершится К определенному моменту в будущем (by next Monday)."],
+      ["Она постоянно жалуется на свою работу.", "She is always complaining about her job", "complains complain complained", "<b>Правило:</b> Present Continuous со словом <i>always</i> передаёт эмоциональное раздражение и критику."],
+      ["Он не знал, что она сделала.", "He did not know what she had done", "does did do", "<b>Правило:</b> Согласование времён: после прошедшего главного предложения предшедствующее действие ставится в Past Perfect."],
+      ["Пока я готовил, она смотрела телевизор.", "While I was cooking she was watching TV", "watched watch watches", "<b>Правило:</b> Два параллельных длительных процесса в прошлом с союзом <i>While</i> употребляются в Past Continuous."],
+      ["Я никогда не видел такую красивую машину.", "I have never seen such a beautiful car", "did see saw", "<b>Правило:</b> Present Perfect (have + V3) передаёт жизненный опыт к настоящему моменту со словом <i>never</i>."],
+      ["Мы летим в Лондон на следующей неделе.", "We are flying to London next week", "fly flew flown", "<b>Правило:</b> Present Continuous выражает запланированные личные договоренности на ближайшее будущее."],
+      ["Он сказал, что поможет мне позже.", "He said he would help me later", "will helps helped", "<b>Правило:</b> Future in the Past: <i>will</i> меняется на <i>would</i> при согласовании с прошедшим главным глаголом (said)."],
+      ["Как только я приеду, я позвоню.", "As soon as I arrive I will call", "arrived calling calls", "<b>Правило:</b> В придаточных времени и условия после <i>as soon as, when, if</i> вместо будущего времени пишется Present Simple."],
+      ["Смотри, на улице идет сильный дождь.", "Look it is raining heavily outside", "rains rain rained", "<b>Правило:</b> Present Continuous используется для описания действия прямо сейчас (привлечение внимания: Look!)."],
+      ["Я ждал автобус целый час.", "I had been waiting for the bus for an hour", "was wait waited", "<b>Правило:</b> Past Perfect Continuous (had been + V-ing) показывает длительность процесса ДО определенного момента в прошлом."],
+      ["К следующему году он уже выпустится.", "By next year he will have graduated", "has graduate graduating", "<b>Правило:</b> Future Perfect (will have + V3) выражает результат, который наступит к фиксированной дате в будущем."],
+      ["В это время завтра мы будем лететь.", "This time tomorrow we will be flying", "are fly flies", "<b>Правило:</b> Future Continuous (will be + V-ing) описывает процесс в конкретно указанный момент будущего."]
+    ]
+  },
+  {
+    title: "Пассивный залог во всех временах",
+    label: "02 · PASSIVE VOICE (ЕГЭ 19-24)",
+    desc: "20 заданий: Present/Past Continuous Passive, Perfect Passive, Модальный пассив.",
+    block: "blockA",
+    items: [
+      ["Письмо было отправлено вчера.", "The letter was sent yesterday", "is send sending", "<b>Пассивный залог:</b> Past Simple Passive образуется по схеме <i>was/were + V3</i>."],
+      ["Новая больница строится сейчас.", "A new hospital is being built now", "was build building", "<b>Пассивный залог:</b> Present Continuous Passive (действие происходит прямо сейчас): <i>is/are + being + V3</i>."],
+      ["Работа уже была сделана.", "The work has already been done", "was do doing", "<b>Пассивный залог:</b> Present Perfect Passive (результат к настоящему): <i>has/have + been + V3</i>."],
+      ["Все билеты были распроданы до шоу.", "All the tickets had been sold out before the show", "have sell selling", "<b>Пассивный залог:</b> Past Perfect Passive (действие до другого события в прошлом): <i>had + been + V3</i>."],
+      ["Эта проблема будет решена скоро.", "This problem will be solved soon", "is solve solving", "<b>Пассивный залог:</b> Future Simple Passive: <i>will be + V3</i>."],
+      ["Комнату нужно убирать каждый день.", "The room must be cleaned every day", "cleans clean cleaning", "<b>Модальный пассив:</b> После модальных глаголов (must, can, should) используется <i>be + V3</i>."],
+      ["Ему предложили очень хорошую работу.", "He was offered a very good job", "is offer offering", "<b>Пассивный залог:</b> Past Simple Passive для косвенного дополнения: <i>was/were + V3</i>."],
+      ["Книгу можно найти в библиотеке.", "The book can be found in the library", "finds finding find", "<b>Модальный пассив:</b> <i>can be + V3</i>."],
+      ["Машину ремонтируют в данный момент.", "The car is being repaired at the moment", "was repair repairing", "<b>Пассивный залог:</b> Present Continuous Passive: <i>is/are + being + V3</i>."],
+      ["Контракт был подписан до нашей встречи.", "The contract had been signed before we met", "has sign signing", "<b>Пассивный залог:</b> Past Perfect Passive: <i>had been + V3</i>."],
+      ["На английском говорят во всем мире.", "English is spoken all over the world", "speaks speaking speak", "<b>Пассивный залог:</b> Present Simple Passive (общеизвестный факт): <i>am/is/are + V3</i>."],
+      ["Вор был пойман полицией.", "The thief was caught by the police", "is catch catching", "<b>Пассивный залог:</b> Past Simple Passive: <i>was/were + V3</i>."],
+      ["Мой телефон недавно украли.", "My phone has been stolen recently", "was steal stealing", "<b>Пассивный залог:</b> Present Perfect Passive (недавно произошедшее с результатом): <i>has been + V3</i>."],
+      ["Правила должны соблюдаться всеми.", "The rules should be followed by everyone", "follow following follows", "<b>Модальный пассив:</b> <i>should be + V3</i>."],
+      ["Дом был разрушен пожаром.", "The house was destroyed by the fire", "is destroy destroying", "<b>Пассивный залог:</b> Past Simple Passive: <i>was/were + V3</i>."],
+      ["Эти туфли сделаны в Италии.", "These shoes are made in Italy", "make making makes", "<b>Пассивный залог:</b> Present Simple Passive множественного числа: <i>are + V3</i>."],
+      ["Проект будет завершен к пятнице.", "The project will have been finished by Friday", "is finish finishing", "<b>Пассивный залог:</b> Future Perfect Passive (завершится к моменту): <i>will have been + V3</i>."],
+      ["Мне всегда задают сложные вопросы.", "I am always asked difficult questions", "was ask asking", "<b>Пассивный залог:</b> Present Simple Passive: <i>am + V3</i>."],
+      ["Окно было разбито мячом.", "The window was broken by a ball", "is break breaking", "<b>Пассивный залог:</b> Past Simple Passive: <i>was + V3</i>."],
+      ["Результаты будут объявлены завтра.", "The results will be announced tomorrow", "are announce announcing", "<b>Пассивный залог:</b> Future Simple Passive: <i>will be + V3</i>."]
+    ]
+  },
+  {
+    title: "Согласование времен и Косвенная речь",
+    label: "03 · REPORTED SPEECH (ЕГЭ 19-24)",
+    desc: "20 заданий: Сдвиг времен (Backshift), косвенные вопросы, повелительные предложения.",
+    block: "blockA",
+    items: [
+      ["Он сказал, что он очень устал.", "He said that he was very tired", "is am are", "<b>Косвенная речь:</b> При сдвиге времён (Backshift) настоящее время <i>am/is</i> переходит в <i>was</i>."],
+      ["Она спросила меня, где я живу.", "She asked me where I lived", "live living lives", "<b>Косвенная речь:</b> В косвенном вопросе используется прямой порядок слов и сдвиг времён (live -> lived)."],
+      ["Они сказали нам не ходить туда.", "They told us not to go there", "do not going", "<b>Косвенная речь:</b> Отрицательное повелительное предложение передается через <i>not to + V1</i>."],
+      ["Он спросил, видел ли я её.", "He asked if I had seen her", "did see saw", "<b>Косвенная речь:</b> Общий вопрос передаётся с помощью союза <i>if/whether</i> + Past Perfect."],
+      ["Она обещала, что придет.", "She promised that she would come", "will comes coming", "<b>Косвенная речь:</b> Будущее время <i>will</i> переходит в <i>would</i> (Future in the Past)."],
+      ["Он поинтересовался, почему я такой грустный.", "He wondered why I was so sad", "am be is", "<b>Косвенная речь:</b> В косвенных вопросах отсутствует инверсия (порядок слов как в утверждении)."],
+      ["Учитель велел нам открыть книги.", "The teacher told us to open our books", "opens opening open", "<b>Косвенная речь:</b> Приказ/инструкция передается схемой <i>tell somebody to DO something</i>."],
+      ["Она призналась, что совершила ошибку.", "She admitted that she had made a mistake", "has make making", "<b>Косвенная речь:</b> Предшествовавшее действие переходит из Past Simple в Past Perfect (had made)."],
+      ["Он спросил меня, как меня зовут.", "He asked me what my name was", "is be am", "<b>Косвенная речь:</b> Прямой порядок слов: подлежащее <i>my name</i> стоит ПЕРЕД глаголом <i>was</i>."],
+      ["Они сказали, что уезжают на следующий день.", "They said they were leaving the next day", "are leave leaving", "<b>Косвенная речь:</b> Present Continuous <i>are leaving</i> переходит в Past Continuous <i>were leaving</i>."],
+      ["Она посоветовала мне обратиться к врачу.", "She advised me to see a doctor", "sees seeing see", "<b>Глаголы речи:</b> Конструкция <i>advise somebody + to V1</i>."],
+      ["Он отрицал, что взял деньги.", "He denied that he had taken the money", "has take taking", "<b>Косвенная речь:</b> Действие в прошлом после <i>denied</i> согласовывается в Past Perfect."],
+      ["Она спросила, могу ли я ей помочь.", "She asked if I could help her", "can helping helps", "<b>Косвенная речь:</b> Модальный глагол <i>can</i> меняется на <i>could</i>."],
+      ["Он сказал, что был там раньше.", "He said he had been there before", "was is being", "<b>Косвенная речь:</b> Прошедшее время <i>was</i> меняется на Past Perfect <i>had been</i> со словом <i>before</i>."],
+      ["Они объяснили, что было слишком поздно.", "They explained that it was too late", "is be are", "<b>Косвенная речь:</b> Настоящее время <i>is</i> меняется на Past Simple <i>was</i>."],
+      ["Она попросила меня не открывать окно.", "She asked me not to open the window", "do not opening", "<b>Косвенная речь:</b> Отрицательная просьба: <i>ask somebody not to DO</i>."],
+      ["Он предложил пойти погулять.", "He suggested going for a walk", "go goes to", "<b>Глаголы речи:</b> Глагол <i>suggest</i> требует после себя герундий (<i>V-ing</i>)."],
+      ["Она сказала мне, что купила машину.", "She told me she had bought a car", "has buy buying", "<b>Косвенная речь:</b> Предшествующее действие покупания выражается через Past Perfect (had bought)."],
+      ["Он спросил, понравился ли мне фильм.", "He asked whether I liked the movie", "like liking likes", "<b>Косвенная речь:</b> Союз <i>whether</i> заменяет вопрос 'ли' с прямым порядком слов."],
+      ["Она заявила, что Земля вращается вокруг Солнца.", "She stated that the earth goes around the sun", "went going go", "<b>Исключение согласования:</b> Для общеизвестных научных фактов и законов природы сдвиг времен НЕ требуется."]
+    ]
+  },
+  {
+    title: "Условные предложения & Конструкция Wish",
+    label: "04 · CONDITIONALS & WISH (ЕГЭ 19-24)",
+    desc: "20 заданий: Conditionals 1, 2, 3, Mixed Conditionals и конструкции I wish.",
+    block: "blockA",
+    items: [
+      ["Если пойдет дождь, мы останемся дома.", "If it rains we will stay at home", "rained stays staying", "<b>Conditional Type 1:</b> Реальное условие в будущем: <i>If + Present Simple, Future Simple (will + V1)</i>."],
+      ["На твоем месте я бы этого не делал.", "If I were you I would not do it", "was will doing", "<b>Conditional Type 2:</b> Нереальное условие в настоящем: <i>If I were you, I would + V1</i>."],
+      ["Если бы он учился, он бы сдал.", "If he had studied he would have passed", "studied passes passing", "<b>Conditional Type 3:</b> Нереальное условие в прошлом: <i>If + Past Perfect, would have + V3</i>."],
+      ["Жаль, что у меня нет больше свободного времени.", "I wish I had more free time", "have having has", "<b>Конструкция Wish:</b> Выражение сожаления о НАСТОЯЩЕМ требует Past Simple после <i>I wish</i>."],
+      ["Если бы только она сказала мне правду тогда.", "If only she had told me the truth", "tells telling tell", "<b>Конструкция If only:</b> Сожаление о ПРОШЛОМ событии требует Past Perfect."],
+      ["Жаль, что ты здесь куришь.", "I wish you would not smoke in here", "don't smoking smokes", "<b>Конструкция Wish:</b> Выражение раздражения или желания изменить чужое поведение: <i>I wish + would/wouldn't + V1</i>."],
+      ["Если нагреть воду, она закипит.", "If you heat water it boils", "boiled boiling boil", "<b>Zero Conditional:</b> Научные законы и постоянные факты: <i>If + Present Simple, Present Simple</i>."],
+      ["При условии, что ты заплатишь, я буду работать.", "Provided that you pay I will work", "paid working works", "<b>Conditionals:</b> Союз <i>Provided that</i> аналогичен <i>If</i> в 1-м типе условий."],
+      ["Если ты не поторопишься, ты опоздаешь.", "Unless you hurry you will be late", "hurried are hurries", "<b>Conditionals:</b> Союз <i>Unless</i> уже содержит отрицание (= <i>If you do NOT hurry</i>)."],
+      ["Что бы ты сделал, если бы увидел привидение?", "What would you do if you saw a ghost", "will see seeing", "<b>Conditional Type 2:</b> Вопросительное предложение: <i>What would + S + do + if + Past Simple</i>."],
+      ["Жаль, что я купил эту машину.", "I wish I had not bought this car", "do not buy buying", "<b>Конструкция Wish:</b> Сожаление о совершенном действии в ПРОШЛОМ: <i>I wish + Past Perfect</i>."],
+      ["Если бы я знал, я бы пришел.", "If I had known I would have come", "know comes coming", "<b>Conditional Type 3:</b> <i>If + Past Perfect, would have + V3</i>."],
+      ["Если бы не твоя помощь, я бы провалился.", "But for your help I would have failed", "fail failing fails", "<b>Устойчивый оборот:</b> <i>But for + Noun</i> (Если бы не...) с условием 3-го типа."],
+      ["Предположим, ты выиграл в лотерею, что бы ты сделал?", "Suppose you won the lottery what would you do", "win will winning", "<b>Conditionals:</b> Союз <i>Suppose/Supposing</i> вводится для нереального 2-го типа со сдвигом в Past Simple."],
+      ["Если он приедет рано, мы сможем начать.", "If he arrives early we can start", "arrived starting arrive", "<b>Conditional Type 1:</b> Главное предложение может содержать модальный глагол (<i>can/may</i>) вместо <i>will</i>."],
+      ["Как бы мне хотелось, чтобы дождь поскорее закончился.", "I wish it would stop raining soon", "stops stopped stopping", "<b>Конструкция Wish:</b> Пожелание изменений в будущем: <i>I wish + S + would + V1</i>."],
+      ["Если бы я говорил по-французски, я бы жил в Париже.", "If I spoke French I would live in Paris", "speak living speaks", "<b>Conditional Type 2:</b> <i>If + Past Simple, would + V1</i>."],
+      ["Если бы она успела на поезд, она была бы здесь сейчас.", "If she had caught the train she would be here", "catches is catch", "<b>Mixed Conditional:</b> Условие в прошлом (Past Perfect) повлияло на результат в настоящем (would + V1)."],
+      ["При условии, что ты обещаешь быть осторожным.", "As long as you promise to be careful", "promised promising promises", "<b>Conditionals:</b> Союз <i>As long as</i> (= при условии если) подчиняется правилам 1-го типа."],
+      ["Жаль, что я не на пляже прямо сейчас.", "I wish I were on a beach right now", "am was being", "<b>Конструкция Wish:</b> В формальном английском форма <i>were</i> используется для всех лиц (I wish I were...)."]
+    ]
+  },
+  {
+    title: "Местоимения, Числительные & Сравнения",
+    label: "05 · NON-VERB FORMS (ЕГЭ 19-24)",
+    desc: "20 заданий: Порядковые числительные, степени сравнения, возвратные местоимения.",
+    block: "blockA",
+    items: [
+      ["Это худший день в моей жизни.", "This is the worst day of my life", "bad worse badly", "<b>Степени сравнения:</b> Исключение: <i>bad -> worse -> the worst</i>."],
+      ["Она намного выше своей сестры.", "She is much taller than her sister", "tall more tallest", "<b>Степени сравнения:</b> Усилитель <i>much</i> используется со сравнительной степенью (much taller)."],
+      ["Он порезался, когда брился.", "He cut himself while he was shaving", "him his he", "<b>Возвратные местоимения:</b> Для подлежащего <i>He</i> используется возвратное местоимение <i>himself</i>."],
+      ["Это самая интересная книга, которую я знаю.", "It is the most interesting book I know", "more interest interestingly", "<b>Превосходная степень:</b> Для многосложных прилагательных: <i>the most + Adj</i>."],
+      ["Они сделали всё это сами.", "They did it all by themselves", "their them they", "<b>Устойчивый оборот:</b> <i>by themselves</i> означает 'самостоятельно, без чужой помощи'."],
+      ["Первый приз был отдан моему брату.", "The first prize was given to my brother", "one once firsly", "<b>Порядковые числительные:</b> Числительное <i>one</i> меняется на <i>first</i>."],
+      ["Здесь меньше яблок, чем там.", "There are fewer apples here than there", "less few least", "<b>Сравнение:</b> С исчисляемыми существительными (apples) используется <i>fewer</i> (а не less)."],
+      ["Он работает усерднее всех остальных.", "He works harder than anyone else", "hardest hardly hard", "<b>Степени сравнения:</b> Короткое наречие/прилагательное <i>hard</i> образует сравнение через суффикс <i>-er</i> (harder)."],
+      ["Эта головоломка слишком сложна для меня.", "This puzzle is too difficult for me", "much many difficulty", "<b>Конструкция:</b> Наречие <i>too</i> (слишком) стоит перед прилагательным."],
+      ["У нас осталось очень мало времени.", "We have very little time left", "few a littler", "<b>Местоимения:</b> С неисчисляемыми существительными (time) в значении 'мало' используется <i>little</i>."],
+      ["Я хочу купить вторую пару обуви.", "I want to buy a second pair of shoes", "two twice twoth", "<b>Порядковые числительные:</b> Числительное <i>two</i> образует форму <i>second</i>."],
+      ["Эта машина в два раза дороже той.", "This car is twice as expensive as that", "more much expenses", "<b>Сравнительная конструкция:</b> <i>twice as + Adj + as</i> (в два раза более... чем)."],
+      ["Он лучший студент в нашем классе.", "He is the best student in our class", "better good well", "<b>Степени сравнения:</b> Исключение: <i>good -> better -> the best</i>."],
+      ["Вчера она купила три новых платья.", "She bought three new dresses yesterday", "third thirds threeth", "<b>Количественные числительные:</b> Простая форма числа 3 — <i>three</i>."],
+      ["Никто другой не знает об этом секрете.", "Nobody else knows about this secret", "some any nothing", "<b>Устойчивое сочетание:</b> <i>Nobody else</i> = 'никто другой'."],
+      ["Дети вели себя очень хорошо.", "The children behaved themselves very well", "their them they", "<b>Возвратный глагол:</b> <i>behave oneself</i> (вести себя); для <i>children</i> — <i>themselves</i>."],
+      ["У него гораздо больше денег, чем у меня.", "He has much more money than I do", "many most mores", "<b>Степени сравнения:</b> Усилительное сочетание <i>much more + Uncountable Noun</i>."],
+      ["Эта задача менее сложная, чем предыдущая.", "This task is less difficult than the previous one", "least little lessly", "<b>Уменьшительное сравнение:</b> <i>less + Adj + than</i> (менее сложная, чем)."],
+      ["Мы познакомились пятого ноября.", "We met on the fifth of November", "five fiveth fifths", "<b>Порядковые числительные:</b> Даты требуют порядкового числительного: <i>five -> fifth</i>."],
+      ["Она немного моложе своего мужа.", "She is slightly younger than her husband", "young youngest youth", "<b>Степени сравнения:</b> Прилагательное <i>young -> younger</i> с определителем <i>slightly</i> (слегка)."]
+    ]
+  },
+  {
+    title: "Суффиксы существительных и прилагательных",
+    label: "06 · NOUN & ADJ SUFFIXES (ЕГЭ 25-29)",
+    desc: "20 заданий: Использование слов с суффиксами -tion, -ment, -ness, -able, -ful, -ous.",
+    block: "blockB",
+    type: "wordform",
+    items: [
+      {
+        ru: "Развитие технологий идет очень быстро.",
+        enGap: "The _____ of technology is very fast.",
+        baseWord: "DEVELOP",
+        answer: "development",
+        hint: "<b>Словообразование:</b> Глагол <i>develop</i> (развивать) + суффикс существительного <b>-ment</b> = <i>development</i> (развитие). Позиция после артикля <i>The</i> требует существительного."
+      },
+      {
+        ru: "Этот источник информации в высшей степени надежен.",
+        enGap: "This source of information is highly _____.",
+        baseWord: "RELY",
+        answer: "reliable",
+        hint: "<b>Словообразование:</b> Глагол <i>rely</i> (полагаться) + суффикс прилагательного <b>-able</b> = <i>reliable</i> (надежный). Буква <i>y</i> меняется на <i>i</i>!"
+      },
+      {
+        ru: "Мы восхищались красотой пейзажа.",
+        enGap: "We admired the _____ of the landscape.",
+        baseWord: "BEAUTIFUL",
+        answer: "beauty",
+        hint: "<b>Словообразование:</b> Из прилагательного <i>beautiful</i> образуем существительное <b>beauty</b> (красота). Позиция после артикля <i>the</i> требует существительного."
+      },
+      {
+        ru: "Он проявил огромное мужество во время пожара.",
+        enGap: "He showed great _____ during the fire.",
+        baseWord: "COURAGEOUS",
+        answer: "courage",
+        hint: "<b>Словообразование:</b> Прилагательное <i>courageous</i> -> существительное <b>courage</b> (мужество, смелость). Корень: <i>courage</i>."
+      },
+      {
+        ru: "Ее выступление на концерте было блестящим.",
+        enGap: "Her _____ at the concert was brilliant.",
+        baseWord: "PERFORM",
+        answer: "performance",
+        hint: "<b>Словообразование:</b> Глагол <i>perform</i> + суффикс существительного <b>-ance</b> = <i>performance</i> (выступление)."
+      },
+      {
+        ru: "Темнота комнаты напугала ребенка.",
+        enGap: "The _____ of the room scared the child.",
+        baseWord: "DARK",
+        answer: "darkness",
+        hint: "<b>Словообразование:</b> Прилагательное <i>dark</i> + суффикс абстрактного существительного <b>-ness</b> = <i>darkness</i> (темнота)."
+      },
+      {
+        ru: "Нам нужно найти творческое решение.",
+        enGap: "We need to find a _____ solution.",
+        baseWord: "CREATE",
+        answer: "creative",
+        hint: "<b>Словообразование:</b> Глагол <i>create</i> + суффикс прилагательного <b>-ive</b> = <i>creative</i> (творческий)."
+      },
+      {
+        ru: "Его внезапное исчезновение было полной загадкой.",
+        enGap: "His sudden _____ was a total mystery.",
+        baseWord: "DISAPPEAR",
+        answer: "disappearance",
+        hint: "<b>Словообразование:</b> Глагол <i>disappear</i> + суффикс существительного <b>-ance</b> = <i>disappearance</i> (исчезновение)."
+      },
+      {
+        ru: "Правительство сделало официальное объявление.",
+        enGap: "The government made an official _____.",
+        baseWord: "ANNOUNCE",
+        answer: "announcement",
+        hint: "<b>Словообразование:</b> Глагол <i>announce</i> + суффикс существительного <b>-ment</b> = <i>announcement</i> (объявление)."
+      },
+      {
+        ru: "Вчера у них был сильный спор.",
+        enGap: "They had a massive _____ yesterday.",
+        baseWord: "ARGUE",
+        answer: "argument",
+        hint: "<b>Словообразование &amp; Орфография:</b> Глагол <i>argue</i> + <b>-ment</b> = <i>argument</i> (спор). Обратите внимание: немая буква <i>e</i> выпадает!"
+      },
+      {
+        ru: "У нее природная способность к изучению языков.",
+        enGap: "She has a natural _____ to learn languages.",
+        baseWord: "ABLE",
+        answer: "ability",
+        hint: "<b>Словообразование:</b> Прилагательное <i>able</i> -> существительное <b>ability</b> (способность) с суффиксом <b>-ity</b>."
+      },
+      {
+        ru: "Учитель похвалил его за честность.",
+        enGap: "The teacher praised him for his _____.",
+        baseWord: "HONEST",
+        answer: "honesty",
+        hint: "<b>Словообразование:</b> Прилагательное <i>honest</i> + суффикс существительного <b>-y</b> = <i>honesty</i> (честность)."
+      },
+      {
+        ru: "Это химическое вещество абсолютно безвредно для человека.",
+        enGap: "This chemical is completely _____ to humans.",
+        baseWord: "HARM",
+        answer: "harmless",
+        hint: "<b>Словообразование:</b> Существительное <i>harm</i> + отрицательный суффикс <b>-less</b> = <i>harmless</i> (безвредный)."
+      },
+      {
+        ru: "Мы наслаждались теплом солнца.",
+        enGap: "We enjoyed the _____ of the sun.",
+        baseWord: "WARM",
+        answer: "warmth",
+        hint: "<b>Словообразование:</b> Прилагательное <i>warm</i> + суффикс существительного <b>-th</b> = <i>warmth</i> (тепло, теплота)."
+      },
+      {
+        ru: "Его лень — причина его провала.",
+        enGap: "His _____ is the reason for his failure.",
+        baseWord: "LAZY",
+        answer: "laziness",
+        hint: "<b>Словообразование &amp; Орфография:</b> <i>lazy</i> + <b>-ness</b> = <i>laziness</i>. Помните: конечная буква <i>y</i> переходит в <i>i</i>!"
+      },
+      {
+        ru: "Она чувствовала глубокое чувство одиночества.",
+        enGap: "She felt a deep sense of _____.",
+        baseWord: "LONELY",
+        answer: "loneliness",
+        hint: "<b>Словообразование &amp; Орфография:</b> <i>lonely</i> + <b>-ness</b> = <i>loneliness</i> (одиночество). Буква <i>y</i> переходит в <i>i</i>!"
+      },
+      {
+        ru: "Инструкции были предельно понятными.",
+        enGap: "The instructions were clearly _____.",
+        baseWord: "UNDERSTAND",
+        answer: "understandable",
+        hint: "<b>Словообразование:</b> Глагол <i>understand</i> + суффикс прилагательного <b>-able</b> = <i>understandable</i> (понятный)."
+      },
+      {
+        ru: "Это очень опасная ситуация.",
+        enGap: "It is a very _____ situation.",
+        baseWord: "DANGER",
+        answer: "dangerous",
+        hint: "<b>Словообразование:</b> Существительное <i>danger</i> + суффикс прилагательного <b>-ous</b> = <i>dangerous</i> (опасный)."
+      },
+      {
+        ru: "Нам нужна финансовая помощь.",
+        enGap: "We need some financial _____.",
+        baseWord: "ASSIST",
+        answer: "assistance",
+        hint: "<b>Словообразование:</b> Глагол <i>assist</i> + суффикс существительного <b>-ance</b> = <i>assistance</i> (помощь, содействие)."
+      },
+      {
+        ru: "Погода в этом регионе очень изменчива.",
+        enGap: "The weather in this region is very _____.",
+        baseWord: "CHANGE",
+        answer: "changeable",
+        hint: "<b>Словообразование:</b> Глагол <i>change</i> + суффикс <b>-able</b> = <i>changeable</i> (изменчивый). Буква <i>e</i> перед <i>-able</i> сохраняется!"
+      }
+    ]
+  },
+  {
+    title: "Отрицательные приставки (Negation)",
+    label: "07 · NEGATIVE PREFIXES (ЕГЭ 25-29)",
+    desc: "20 заданий: Использование отрицательных приставок un-, in-, im-, il-, ir-, dis-, mis-.",
+    block: "blockB",
+    type: "wordform",
+    items: [
+      {
+        ru: "Эту математическую задачу невозможно решить.",
+        enGap: "It is _____ to solve this math problem.",
+        baseWord: "POSSIBLE",
+        answer: "impossible",
+        hint: "<b>Приставка:</b> Перед согласными <b>p, m, b</b> используется отрицательная приставка <b>im-</b> (possible -> impossible)."
+      },
+      {
+        ru: "Его поведение сегодня было совершенно неприемлемым.",
+        enGap: "His behavior was completely _____ today.",
+        baseWord: "ACCEPTABLE",
+        answer: "unacceptable",
+        hint: "<b>Приставка:</b> Для большинства прилагательных на -able используется приставка <b>un-</b> (acceptable -> unacceptable)."
+      },
+      {
+        ru: "Информация, которую вы предоставили, совершенно неверна.",
+        enGap: "The information you provided is entirely _____.",
+        baseWord: "CORRECT",
+        answer: "incorrect",
+        hint: "<b>Приставка:</b> Прилагательное <i>correct</i> образует отрицание с помощью приставки <b>in-</b> (incorrect)."
+      },
+      {
+        ru: "Я недоволен текущим обслуживанием.",
+        enGap: "I am _____ with the current service.",
+        baseWord: "SATISFIED",
+        answer: "dissatisfied",
+        hint: "<b>Приставка:</b> Приставка <b>dis-</b> выражает несогласие или противоположное качество (satisfied -> dissatisfied)."
+      },
+      {
+        ru: "Парковать здесь машину незаконно.",
+        enGap: "It is _____ to park your car here.",
+        baseWord: "LEGAL",
+        answer: "illegal",
+        hint: "<b>Приставка:</b> Перед буквой <b>l</b> используется отрицательная приставка <b>il-</b> (legal -> illegal)."
+      },
+      {
+        ru: "Она была не в курсе новых правил.",
+        enGap: "She was _____ of the new rules.",
+        baseWord: "AWARE",
+        answer: "unaware",
+        hint: "<b>Приставка:</b> Приставка <b>un-</b> выражает отсутствие осведомленности (aware -> unaware)."
+      },
+      {
+        ru: "Он очень нетерпелив, когда ждет автобус.",
+        enGap: "He is very _____ when waiting for buses.",
+        baseWord: "PATIENT",
+        answer: "impatient",
+        hint: "<b>Приставка:</b> Перед буквой <b>p</b> пишется приставка <b>im-</b> (patient -> impatient)."
+      },
+      {
+        ru: "История, которую он нам рассказал, была крайне маловероятной.",
+        enGap: "The story he told us was highly _____.",
+        baseWord: "PROBABLE",
+        answer: "improbable",
+        hint: "<b>Приставка:</b> Перед буквой <b>p</b> пишется приставка <b>im-</b> (probable -> improbable)."
+      },
+      {
+        ru: "Пожалуйста, не поймите неправильно мои намерения.",
+        enGap: "Please do not _____ my good intentions.",
+        baseWord: "UNDERSTAND",
+        answer: "misunderstand",
+        hint: "<b>Приставка:</b> Приставка <b>mis-</b> обозначает ошибочное или неправильное действие (understand -> misunderstand)."
+      },
+      {
+        ru: "Его стол всегда неопрятный и грязный.",
+        enGap: "His desk is always _____ and messy.",
+        baseWord: "TIDY",
+        answer: "untidy",
+        hint: "<b>Приставка:</b> Универсальная приставка <b>un-</b> выражает противоположное состояние (tidy -> untidy)."
+      },
+      {
+        ru: "Результаты теста были довольно неожиданными.",
+        enGap: "The results of the test were quite _____.",
+        baseWord: "EXPECTED",
+        answer: "unexpected",
+        hint: "<b>Приставка:</b> Универсальная отрицательная приставка <b>un-</b> (expected -> unexpected)."
+      },
+      {
+        ru: "С вашей стороны было безответственно уйти рано.",
+        enGap: "It was _____ of you to leave early.",
+        baseWord: "RESPONSIBLE",
+        answer: "irresponsible",
+        hint: "<b>Приставка:</b> Перед буквой <b>r</b> пишется приставка <b>ir-</b> (responsible -> irresponsible)."
+      },
+      {
+        ru: "Она чувствует себя неуверенно из-за своей внешности.",
+        enGap: "She feels _____ about her physical appearance.",
+        baseWord: "SECURE",
+        answer: "insecure",
+        hint: "<b>Приставка:</b> Отрицательная приставка <b>in-</b> (secure -> insecure = неуверенный)."
+      },
+      {
+        ru: "Учителю не нравилось его постоянное плохое поведение.",
+        enGap: "The teacher _____ his constant bad behavior.",
+        baseWord: "LIKE",
+        answer: "disliked",
+        hint: "<b>Приставка &amp; Время:</b> Глагол в прошедшем времени с приставкой <b>dis-</b> + окончание <i>-ed</i>: <b>disliked</b>."
+      },
+      {
+        ru: "Делать это сейчас абсолютно нелогично.",
+        enGap: "It is totally _____ to do it now.",
+        baseWord: "LOGICAL",
+        answer: "illogical",
+        hint: "<b>Приставка:</b> Перед буквой <b>l</b> используется приставка <b>il-</b> (logical -> illogical)."
+      },
+      {
+        ru: "Он дал неточное описание подозреваемого.",
+        enGap: "He gave an _____ description of the suspect.",
+        baseWord: "ACCURATE",
+        answer: "inaccurate",
+        hint: "<b>Приставка:</b> Прилагательное <i>accurate</i> (точный) -> приставка <b>in-</b> = <i>inaccurate</i> (неточный)."
+      },
+      {
+        ru: "Ее почерк для меня совершенно неразборчив.",
+        enGap: "Her handwriting is completely _____ to me.",
+        baseWord: "LEGIBLE",
+        answer: "illegible",
+        hint: "<b>Приставка:</b> Перед буквой <b>l</b> используется приставка <b>il-</b> (legible -> illegible = неразборчивый)."
+      },
+      {
+        ru: "Они отключили электричество из-за неоплаченных счетов.",
+        enGap: "They _____ the electricity due to unpaid bills.",
+        baseWord: "CONNECT",
+        answer: "disconnected",
+        hint: "<b>Приставка &amp; Время:</b> Глагол в Past Simple: приставка <b>dis-</b> + <i>-ed</i> = <b>disconnected</b>."
+      },
+      {
+        ru: "Судья счел доказательства не относящимися к делу.",
+        enGap: "The judge considered the evidence to be _____.",
+        baseWord: "RELEVANT",
+        answer: "irrelevant",
+        hint: "<b>Приставка:</b> Перед буквой <b>r</b> пишется отрицательная приставка <b>ir-</b> (relevant -> irrelevant)."
+      },
+      {
+        ru: "Ему не повезло, что он не выиграл игру.",
+        enGap: "He was _____ not to win the game.",
+        baseWord: "LUCKY",
+        answer: "unlucky",
+        hint: "<b>Приставка:</b> Универсальная отрицательная приставка <b>un-</b> (lucky -> unlucky)."
+      }
+    ]
+  },
+  {
+    title: "Глагольное и Наречное словообразование",
+    label: "08 · VERB & ADVERB DERIVATIVE (ЕГЭ 25-29)",
+    desc: "20 заданий: Суффиксы глаголов (-ize, -en, -ify) и наречий (-ly, -ically).",
+    block: "blockB",
+    type: "wordform",
+    items: [
+      {
+        ru: "Нам нужно укрепить нашу текущую позицию.",
+        enGap: "We need to _____ our current position.",
+        baseWord: "STRONG",
+        answer: "strengthen",
+        hint: "<b>Глагол:</b> Прилагательное <i>strong</i> -> существительное <i>strength</i> + глагольный суффикс <b>-en</b> = <b>strengthen</b> (укреплять)."
+      },
+      {
+        ru: "Он автоматически запер за собой дверь.",
+        enGap: "He _____ locked the door behind him.",
+        baseWord: "AUTOMATIC",
+        answer: "automatically",
+        hint: "<b>Наречие:</b> Для прилагательных на <i>-ic</i> наречие образуется через <b>-ically</b> (automatic -> automatically)."
+      },
+      {
+        ru: "Они хотят модернизировать старый завод.",
+        enGap: "They want to _____ the old factory.",
+        baseWord: "MODERN",
+        answer: "modernize",
+        hint: "<b>Глагол:</b> Прилагательное <i>modern</i> + глагольный суффикс <b>-ize</b> = <b>modernize</b> (модернизировать)."
+      },
+      {
+        ru: "Небо начало темнеть с приближением ночи.",
+        enGap: "The sky began to _____ as night approached.",
+        baseWord: "DARK",
+        answer: "darken",
+        hint: "<b>Глагол:</b> Прилагательное <i>dark</i> + глагольный суффикс <b>-en</b> = <b>darken</b> (темнеть)."
+      },
+      {
+        ru: "Она говорила с ребенком очень мягко.",
+        enGap: "She spoke very _____ to the baby.",
+        baseWord: "SOFT",
+        answer: "softly",
+        hint: "<b>Наречие:</b> Прилагательное <i>soft</i> + суффикс наречия <b>-ly</b> = <b>softly</b> (мягко, тихо)."
+      },
+      {
+        ru: "Вам следует уточнить, чего именно вы хотите.",
+        enGap: "You should _____ what exactly you want.",
+        baseWord: "SPECIFIC",
+        answer: "specify",
+        hint: "<b>Глагол:</b> Прилагательное <i>specific</i> + глагольный суффикс <b>-ify</b> = <b>specify</b> (уточнять)."
+      },
+      {
+        ru: "Дорога расширится после следующего поворота.",
+        enGap: "The road will _____ after the next turn.",
+        baseWord: "WIDE",
+        answer: "widen",
+        hint: "<b>Глагол:</b> Прилагательное <i>wide</i> + суффикс <b>-en</b> = <b>widen</b> (расширяться)."
+      },
+      {
+        ru: "Он быстро понял, что был абсолютно неправ.",
+        enGap: "He _____ realized that he was totally wrong.",
+        baseWord: "QUICK",
+        answer: "quickly",
+        hint: "<b>Наречие:</b> Прилагательное <i>quick</i> + суффикс наречия <b>-ly</b> = <b>quickly</b> (быстро)."
+      },
+      {
+        ru: "Мы настоятельно рекомендуем посетить этот музей.",
+        enGap: "We _____ recommend visiting this museum.",
+        baseWord: "HIGH",
+        answer: "highly",
+        hint: "<b>Наречие:</b> Наречие <i>highly</i> употребляется в значении 'очень, крайне, настоятельно' (highly recommend)."
+      },
+      {
+        ru: "Пожалуйста, проясните для нас ваше заявление.",
+        enGap: "Please _____ your statement for us.",
+        baseWord: "CLEAR",
+        answer: "clarify",
+        hint: "<b>Глагол:</b> Прилагательное <i>clear</i> -> глагол с суффиксом <b>-ify</b>: <b>clarify</b> (прояснять). Обратите внимание на корень <i>clar-</i>!"
+      },
+      {
+        ru: "Это лекарство облегчит твою ужасную боль.",
+        enGap: "The medicine will _____ your terrible pain.",
+        baseWord: "RELIEF",
+        answer: "relieve",
+        hint: "<b>Глагол:</b> Существительное <i>relief</i> (облегчение) -> глагол <b>relieve</b> (облегчать боль)."
+      },
+      {
+        ru: "Она успешно сдала свои выпускные экзамены.",
+        enGap: "She _____ completed her final exams today.",
+        baseWord: "SUCCESS",
+        answer: "successfully",
+        hint: "<b>Наречие:</b> Существительное <i>success</i> -> прил. <i>successful</i> + суффикс <b>-ly</b> = <b>successfully</b>."
+      },
+      {
+        ru: "Компания стремится глобализировать свои операции.",
+        enGap: "The company aims to _____ its operations.",
+        baseWord: "GLOBAL",
+        answer: "globalize",
+        hint: "<b>Глагол:</b> Прилагательное <i>global</i> + суффикс <b>-ize</b> = <b>globalize</b> (глобализировать)."
+      },
+      {
+        ru: "Он глубоко сожалеет о том, что сказал вчера.",
+        enGap: "He _____ regrets what he said yesterday.",
+        baseWord: "DEEP",
+        answer: "deeply",
+        hint: "<b>Наречие:</b> Прилагательное <i>deep</i> + суффикс <b>-ly</b> = <b>deeply</b> (глубоко, искренне)."
+      },
+      {
+        ru: "Ты должен оправдать свое отсутствие сегодня.",
+        enGap: "You must _____ your unexpected absence today.",
+        baseWord: "JUST",
+        answer: "justify",
+        hint: "<b>Глагол:</b> Прилагательное <i>just</i> + суффикс <b>-ify</b> = <b>justify</b> (оправдывать, обосновывать)."
+      },
+      {
+        ru: "На этой неделе температура будет неуклонно расти.",
+        enGap: "The temperature will _____ increase this week.",
+        baseWord: "STEADY",
+        answer: "steadily",
+        hint: "<b>Наречие &amp; Орфография:</b> <i>steady</i> + <b>-ly</b> = <b>steadily</b> (неуклонно). Буква <i>y</i> переходит в <i>i</i>!"
+      },
+      {
+        ru: "Этот простой инструмент облегчит твою работу.",
+        enGap: "This simple tool will _____ your work.",
+        baseWord: "EASY",
+        answer: "ease",
+        hint: "<b>Глагол:</b> Прилагательное <i>easy</i> -> глагол <b>ease</b> (облегчать, снижать сложность)."
+      },
+      {
+        ru: "Они официально объявили о помолвке.",
+        enGap: "They _____ announced their engagement last night.",
+        baseWord: "OFFICIAL",
+        answer: "officially",
+        hint: "<b>Наречие &amp; Орфография:</b> Прилагательное <i>official</i> + <b>-ly</b> = <b>officially</b> (официально). Пишется двойная <i>ll</i>!"
+      },
+      {
+        ru: "Нам нужно сократить этот длинный текст.",
+        enGap: "We need to _____ this long text.",
+        baseWord: "SHORT",
+        answer: "shorten",
+        hint: "<b>Глагол:</b> Прилагательное <i>short</i> + глагольный суффикс <b>-en</b> = <b>shorten</b> (сокращать)."
+      },
+      {
+        ru: "Она счастливо улыбнулась, когда увидела его.",
+        enGap: "She smiled _____ when she saw him.",
+        baseWord: "HAPPY",
+        answer: "happily",
+        hint: "<b>Наречие &amp; Орфография:</b> <i>happy</i> + <b>-ly</b> = <b>happily</b> (счастливо). Буква <i>y</i> меняется на <i>i</i>!"
+      }
+    ]
+  },
+  {
+    title: "Лексический выбор & Фразовые глаголы",
+    label: "09 · VOCAB & PHRASAL VERBS (ЕГЭ 30-36)",
+    desc: "20 заданий: Устойчивые комбинации и популярные фразовые глаголы.",
+    block: "blockC",
+    items: [
+      ["Они решили отложить встречу.", "They decided to put off the meeting", "call take make", "<b>Фразовый глагол:</b> <i>put off</i> = откладывать на потом."],
+      ["Пожалуйста, выключи свет перед уходом.", "Please turn off the lights before leaving", "make put take", "<b>Фразовый глагол:</b> <i>turn off</i> = выключать прибор/свет."],
+      ["Он пошел в отца своей внешностью.", "He takes after his father in appearance", "looks runs goes", "<b>Фразовый глагол:</b> <i>take after</i> = быть похожим на старшего родственника."],
+      ["Я с нетерпением жду скорой встречи с тобой.", "I am looking forward to seeing you soon", "watching waiting taking", "<b>Конструкция:</b> <i>look forward to + V-ing</i> = ждать с нетерпением."],
+      ["Она всегда выдумывает интересные сказки на ночь.", "She always makes up interesting bedtime stories", "does puts takes", "<b>Фразовый глагол:</b> <i>make up</i> = сочинять, выдумывать."],
+      ["Сегодня утром у нас закончилось молоко.", "We ran out of milk this morning", "went got put", "<b>Фразовый глагол:</b> <i>run out of</i> = истощить запасы, закончиться."],
+      ["Он бросил курить два года назад.", "He gave up smoking two years ago", "took put made", "<b>Фразовый глагол:</b> <i>give up</i> = бросить привычку."],
+      ["Самолет взлетает в девять часов.", "The plane takes off at nine o'clock", "flies goes runs", "<b>Фразовый глагол:</b> <i>take off</i> = взлетать (о самолете)."],
+      ["Тебе следует посмотреть это слово в словаре.", "You should look it up in the dictionary", "see watch put", "<b>Фразовый глагол:</b> <i>look up</i> = искать значение слова в справочнике."],
+      ["Они сломались по дороге домой.", "They broke down on the way home", "went fell turned", "<b>Фразовый глагол:</b> <i>break down</i> = ломаться (о машине/механизме)."],
+      ["Ты можешь присмотреть за моей кошкой сегодня вечером?", "Can you look after my cat tonight", "take watch make", "<b>Фразовый глагол:</b> <i>look after</i> = присматривать, заботиться."],
+      ["Он провел эксперимент очень тщательно.", "He carried out the experiment very carefully", "made did took", "<b>Фразовый глагол:</b> <i>carry out</i> = проводить исследование/эксперимент."],
+      ["Я не лажу со своими соседями.", "I do not get along with my neighbors", "take make put", "<b>Фразовый глагол:</b> <i>get along with</i> = находиться в хороших отношениях."],
+      ["Собрание оказалось очень полезным.", "The meeting turned out to be very useful", "made came took", "<b>Фразовый глагол:</b> <i>turn out to be</i> = оказаться в итоге."],
+      ["Вам нужно заполнить этот пустой бланк.", "You need to fill in this blank form", "make write put", "<b>Фразовый глагол:</b> <i>fill in</i> = заполнять документацию/анкету."],
+      ["Она тихо скончалась во сне.", "She passed away quietly in her sleep", "went left took", "<b>Фразовый глагол:</b> <i>pass away</i> = умереть (вежливая форма)."],
+      ["Он надел пальто и быстро ушел.", "He put on his coat and left quickly", "took made got", "<b>Фразовый глагол:</b> <i>put on</i> = надевать одежду."],
+      ["Они отменили матч из-за дождя.", "They called off the match due to rain", "put took made", "<b>Фразовый глагол:</b> <i>call off</i> = отменять мероприятие."],
+      ["Вчера я случайно наткнулся на это старое фото.", "I came across this old photo yesterday", "went looked put", "<b>Фразовый глагол:</b> <i>come across</i> = случайно наткнуться."],
+      ["Мы должны отправиться в путь рано утром.", "We must set off early in the morning", "go make take", "<b>Фразовый глагол:</b> <i>set off</i> = отправляться в путешествие."]
+    ]
+  },
+  {
+    title: "Связующие слова и Коннекторы",
+    label: "10 · CONNECTORS & LINKERS (ЕГЭ 30-36)",
+    desc: "20 заданий: Although, Despite, In spite of, However, Due to, Therefore.",
+    block: "blockC",
+    items: [
+      ["Несмотря на дождь, мы пошли гулять.", "Despite the rain we went for a walk", "Although However While", "<b>Предлоги уступки:</b> <i>Despite + Noun/V-ing</i> (без предлога of)."],
+      ["Рейс задержали из-за плохой погоды.", "The flight was delayed due to bad weather", "because since as", "<b>Причина:</b> <i>due to + Noun</i> (из-за чего-то)."],
+      ["Хотя он был болен, он пошел на работу.", "Although he was sick he went to work", "Despite In But", "<b>Союзы уступки:</b> <i>Although + грамматическая основа (S + V)</i>."],
+      ["Как бы сильно он ни старался, он не смог победить.", "However hard he tried he could not win", "Although Despite But", "<b>Конструкция:</b> <i>However + прилагательное/наречие + S + V</i>."],
+      ["Я остался дома, потому что устал.", "I stayed at home because I was tired", "due owing despite", "<b>Причина:</b> <i>because + придаточное предложение</i>."],
+      ["Несмотря на свой возраст, он бегает быстро.", "In spite of his age he runs fast", "Although While Because", "<b>Предлоги уступки:</b> <i>In spite of + Noun</i>."],
+      ["Кроме того, нам нужно учитывать стоимость.", "Furthermore we need to consider the cost", "Although Despite But", "<b>Связующее слово:</b> <i>Furthermore</i> = более того, к тому же."],
+      ["Он умный, тогда как его брат ленивый.", "He is smart whereas his brother is lazy", "despite due however", "<b>Контраст:</b> <i>whereas</i> = в то время как, тогда как."],
+      ["Если только ты не поможешь мне, я провалюсь.", "Unless you help me I will fail", "If Provided Despite", "<b>Союзы условия:</b> <i>Unless</i> = если не."],
+      ["Следовательно, мы решили отменить это.", "Therefore we have decided to cancel it", "Because Since Although", "<b>Следствие:</b> <i>Therefore</i> = поэтому, следовательно."],
+      ["Даже хотя шел дождь, нам было весело.", "Even though it rained we had great fun", "Despite However In", "<b>Уступка:</b> <i>Even though + S + V</i>."],
+      ["Из-за забастовки поезда полностью отменены.", "Owing to the strike trains are cancelled", "Because As Since", "<b>Причина:</b> <i>Owing to + Noun</i> (синоним due to)."],
+      ["В результате он потерял работу.", "Consequently he lost his job last week", "Because Although Despite", "<b>Следствие:</b> <i>Consequently</i> = как следствие."],
+      ["В дополнение к этому вы должны платить налоги.", "In addition to this you must pay taxes", "However Although Because", "<b>Дополнение:</b> <i>In addition to + Noun/V-ing</i>."],
+      ["При условии, что ты будешь учиться, ты сдашь.", "Provided that you study you will pass", "Unless Despite However", "<b>Условие:</b> <i>Provided that</i> = при условии что."],
+      ["Поскольку ты здесь, давай начнем.", "Since you are here let us start", "Due However Despite", "<b>Причина:</b> <i>Since</i> в начале предложения = так как, поскольку."],
+      ["С одной стороны, это очень дешево.", "On the one hand it is very cheap", "Although Despite But", "<b>Вводная фраза:</b> <i>On the one hand</i> = с одной стороны."],
+      ["Он провалил экзамен, тем не менее, он улыбался.", "He failed his exam nevertheless he smiled", "because since despite", "<b>Контраст:</b> <i>nevertheless</i> = тем не менее."],
+      ["При условии, что ты стараешься, ты добьешься успеха.", "As long as you try you will succeed", "Unless Despite However", "<b>Условие:</b> <i>As long as</i> = пока, при условии если."],
+      ["В результате компания обанкротилась.", "As a result the company went bankrupt", "Because Since Although", "<b>Следствие:</b> <i>As a result</i> = в результате."]
+    ]
+  },
+  {
+    title: "Инверсия и Эмфатический синтаксис",
+    label: "11 · ADVANCED INVERSION (ПРОДВИНУТЫЙ)",
+    desc: "20 заданий: Hardly...when, No sooner...than, Under no circumstances.",
+    block: "blockC",
+    items: [
+      ["Едва он приехал, как зазвонил телефон.", "Hardly had he arrived when the phone rang", "did arrives arriving", "<b>Инверсия:</b> <i>Hardly + had + S + V3 + when + Past Simple</i>."],
+      ["Никогда прежде я не видел такой красоты.", "Never before have I seen such beauty", "did see seeing", "<b>Инверсия:</b> <i>Never before + have/had + S + V3</i>."],
+      ["Ни при каких обстоятельствах ты не должен открывать это.", "Under no circumstances should you open it", "do opened opening", "<b>Инверсия:</b> <i>Under no circumstances + modal/auxiliary + S + V1</i>."],
+      ["Не успели мы уйти, как пошел дождь.", "No sooner had we left than it rained", "when leaves leaving", "<b>Инверсия:</b> <i>No sooner + had + S + V3 + THAN + Past Simple</i>."],
+      ["Редко мы видим таких редких птиц.", "Seldom do we see such rare birds", "have seeing seen", "<b>Инверсия:</b> <i>Seldom + do/does/did + S + V1</i>."],
+      ["Только тогда я осознал свою ошибку.", "Only then did I realize my mistake", "have realize realized", "<b>Инверсия:</b> <i>Only then + did + S + V1</i>."],
+      ["Мало она знала о его тайных планах.", "Little did she know about his secret plans", "has knowing known", "<b>Инверсия:</b> <i>Little + did + S + V1</i>."],
+      ["Он не только умен, но и добр.", "Not only is he smart but also kind", "does am are", "<b>Инверсия:</b> <i>Not only + is/are/was + S + Adj...</i>."],
+      ["Нигде больше вы не найдете такой еды.", "Nowhere else will you find such good food", "do finds finding", "<b>Инверсия:</b> <i>Nowhere else + will + S + V1</i>."],
+      ["Только вчера я услышал эти новости.", "Not until yesterday did I hear the news", "have hears hearing", "<b>Инверсия:</b> <i>Not until... + did + S + V1</i>."],
+      ["Редко он делает такие очевидные ошибки.", "Rarely does he make such obvious mistakes", "has making made", "<b>Инверсия:</b> <i>Rarely + does + S + V1</i>."],
+      ["Ни в коем случае ты не должен говорить об этом.", "On no account must you tell anyone this", "do tells telling", "<b>Инверсия:</b> <i>On no account + must + S + V1</i>."],
+      ["Едва она заговорила, как он ее перебил.", "Barely had she spoken when he interrupted", "did speaks speaking", "<b>Инверсия:</b> <i>Barely + had + S + V3 + when + Past Simple</i>."],
+      ["Ни в коей мере это не влияет на решение.", "In no way does this affect our decision", "is affecting affected", "<b>Инверсия:</b> <i>In no way + does/did + S + V1</i>."],
+      ["Только позже они обнаружили скрытую правду.", "Only later did they discover the hidden truth", "have discovers discovering", "<b>Инверсия:</b> <i>Only later + did + S + V1</i>."],
+      ["Ни разу он не заподозрил опасность.", "At no time did he suspect the danger", "has suspecting suspected", "<b>Инверсия:</b> <i>At no time + did + S + V1</i>."],
+      ["Ни единого слова она не сказала.", "Not a single word did she say", "has says saying", "<b>Инверсия:</b> <i>Not a single word + did + S + V1</i>."],
+      ["Только практикуясь, ты можешь улучшить навыки.", "Only by practicing can you improve your skills", "do improves improving", "<b>Инверсия:</b> <i>Only by + V-ing + can + S + V1</i>."],
+      ["Так быстро он бежал, что выиграл.", "So fast did he run that he won", "has runs running", "<b>Инверсия:</b> <i>So + Adj/Adv + did + S + V1 + that...</i>."],
+      ["Таким был его гнев, что он потерял контроль.", "Such was his anger that he lost control", "is loses losing", "<b>Инверсия:</b> <i>Such + was/were + Noun + that...</i>."]
+    ]
+  },
+  {
+    title: "Инфинитив, Герундий & Complex Object",
+    label: "12 · INFINITIVE & GERUND (ПРОДВИНУТЫЙ)",
+    desc: "20 заданий: Complex Object, глаголы с изменением значения (remember, stop).",
+    block: "blockC",
+    items: [
+      ["Учитель заставил нас переписать тест.", "The teacher made us rewrite the test", "rewriting to rewrites", "<b>Complex Object:</b> Глагол <i>make somebody DO something</i> (голый инфинитив без to)."],
+      ["Я с нетерпением жду вестей от тебя.", "I look forward to hearing from you", "hear to hears", "<b>Герундий:</b> Выражение <i>look forward to + V-ing</i>."],
+      ["Он предложил пойти погулять.", "He suggested going out for a walk", "to go goes", "<b>Герундий:</b> Глагол <i>suggest + V-ing</i>."],
+      ["Она решила сменить текущую работу.", "She decided to change her current job", "changing change changes", "<b>Инфинитив:</b> Глагол <i>decide + to V1</i>."],
+      ["Они позволили ему уйти пораньше сегодня.", "They let him go early today", "going to goes", "<b>Complex Object:</b> Глагол <i>let somebody DO something</i> (без to)."],
+      ["Я помню, как запирал дверь перед уходом.", "I remember locking the door before leaving", "to lock locks", "<b>Герундий vs Инфинитив:</b> <i>remember + V-ing</i> = помню о действии в прошлом."],
+      ["Не забудь купить молока.", "Do not forget to buy some milk", "buying buy buys", "<b>Герундий vs Инфинитив:</b> <i>forget + to V1</i> = не забудь выполнить задачу в будущем."],
+      ["Он бросил курить несколько лет назад.", "He stopped smoking a few years ago", "to smoke smokes", "<b>Герундий vs Инфинитив:</b> <i>stop + V-ing</i> = прекратить действие навсегда."],
+      ["Она предпочитает чтение просмотру фильмов.", "She prefers reading books to watching movies", "read to reads", "<b>Конструкция:</b> <i>prefer V-ing TO V-ing</i>."],
+      ["Я привык просыпаться рано.", "I am used to waking up early", "wake to wakes", "<b>Конструкция:</b> <i>be used to + V-ing</i> (иметь привычку)."],
+      ["Нет смысла плакать над пролитым молоком.", "It is no use crying over spilled milk", "to cry cries", "<b>Герундий:</b> Оборот <i>It is no use + V-ing</i>."],
+      ["Он отказался отвечать на мои вопросы.", "He refused to answer my personal questions", "answering answer answers", "<b>Инфинитив:</b> Глагол <i>refuse + to V1</i>."],
+      ["Мы наслаждались прогулкой в парке.", "We enjoyed walking in the dark park", "to walk walks", "<b>Герундий:</b> Глагол <i>enjoy + V-ing</i>."],
+      ["Я бы предпочел остаться дома сегодня.", "I would rather stay at home tonight", "staying to stays", "<b>Конструкция:</b> <i>would rather DO something</i> (без to)."],
+      ["Она избегала прямого ответа на вопрос.", "She avoided answering the question directly", "to answer answers", "<b>Герундий:</b> Глагол <i>avoid + V-ing</i>."],
+      ["Ему удалось сдать выпускной экзамен.", "He succeeded in passing the final exam", "to pass passes", "<b>Герундий:</b> Конструкция <i>succeed in + V-ing</i>."],
+      ["Я не могу не смеяться над этой шуткой.", "I cannot help laughing at this joke", "to laugh laughs", "<b>Герундий:</b> Выражение <i>cannot help + V-ing</i>."],
+      ["Она предупредила его не опаздывать.", "She warned him not to be late", "being be is", "<b>Инфинитив:</b> <i>warn somebody (not) to V1</i>."],
+      ["Они планируют навестить нас скоро.", "They are planning to visit us soon", "visiting visit visits", "<b>Инфинитив:</b> Глагол <i>plan + to V1</i>."],
+      ["Он увлекается игрой в шахматы онлайн.", "He is fond of playing chess online", "to play plays", "<b>Герундий:</b> Конструкция <i>be fond of + V-ing</i>."]
+    ]
+  }
+];
+
+// Parser: Преобразует rawLessons в рабочий интерактивный массив
+const lessons = rawLessons.map(lesson => ({
+  title: lesson.title,
+  label: lesson.label,
+  desc: lesson.desc,
+  block: lesson.block,
+  items: lesson.items.map(task => {
+    if (lesson.block === 'blockB' || task.type === 'wordform') {
+      return {
+        type: "wordform",
+        formatTag: "🔤 СЛОВО-ОБРАЗОВАНИЕ (ЕГЭ 25-29)",
+        ru: task.ru,
+        enGap: task.enGap,
+        baseWord: task.baseWord,
+        answer: task.answer,
+        hint: task.hint
+      };
+    } else {
+      const ansArray = task[1].split(' ');
+      const distArray = task[2].split(' ');
+      return {
+        type: "builder",
+        formatTag: "🧩 КОНСТРУКТОР СИНТАКСИСА",
+        ru: task[0],
+        answer: ansArray,
+        bank: [...ansArray, ...distArray],
+        hint: task[3].startsWith('<b>') ? task[3] : `<b>Правило:</b> ${task[3]}`
+      };
+    }
+  })
+}));
+
+let lessonIndex = 0;
+let currentDeck = [];
+let currentTask = null;
+let built = [];
+let earnedXP = 0;
+let masteredCount = 0;
+let totalModuleTasks = 0;
+let activeCategory = 'all';
+let dragState = null;
+let audioCtx = null;
+let soundEnabled = true;
+
+const $ = id => document.getElementById(id);
+
+function initAudio() {
+  if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+}
+
+function toggleSound() {
+  soundEnabled = !soundEnabled;
+  $("soundBtn").textContent = soundEnabled ? "🔊 SOUND: ON" : "🔇 SOUND: OFF";
+  $("soundBtn").style.background = soundEnabled ? "var(--cyan)" : "#ccc";
+}
+
+function playSfx(type) {
+  if (!soundEnabled) return;
+  try {
+    initAudio();
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+
+    const now = audioCtx.currentTime;
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.connect(gain); gain.connect(audioCtx.destination);
+
+    if (type === 'pick') {
+      osc.type = 'sine'; osc.frequency.setValueAtTime(380, now);
+      osc.frequency.exponentialRampToValueAtTime(750, now + 0.05);
+      gain.gain.setValueAtTime(0.1, now); gain.gain.linearRampToValueAtTime(0, now + 0.05);
+      osc.start(now); osc.stop(now + 0.05);
+    } else if (type === 'drop') {
+      osc.type = 'triangle'; osc.frequency.setValueAtTime(320, now);
+      osc.frequency.exponentialRampToValueAtTime(140, now + 0.08);
+      gain.gain.setValueAtTime(0.15, now); gain.gain.linearRampToValueAtTime(0, now + 0.08);
+      osc.start(now); osc.stop(now + 0.08);
+    } else if (type === 'hint') {
+      osc.type = 'sine'; osc.frequency.setValueAtTime(587, now);
+      osc.frequency.setValueAtTime(880, now + 0.1);
+      gain.gain.setValueAtTime(0.12, now); gain.gain.linearRampToValueAtTime(0, now + 0.25);
+      osc.start(now); osc.stop(now + 0.25);
+    } else if (type === 'flyback') {
+      osc.type = 'sawtooth'; osc.frequency.setValueAtTime(700, now);
+      osc.frequency.exponentialRampToValueAtTime(120, now + 0.35);
+      gain.gain.setValueAtTime(0.18, now); gain.gain.linearRampToValueAtTime(0, now + 0.35);
+      osc.start(now); osc.stop(now + 0.35);
+    } else if (type === 'success') {
+      [523.25, 659.25, 783.99, 1046.50].forEach((freq, idx) => {
+        const o = audioCtx.createOscillator(), g = audioCtx.createGain();
+        o.connect(g); g.connect(audioCtx.destination);
+        o.type = 'square'; o.frequency.value = freq;
+        g.gain.setValueAtTime(0.08, now + idx * 0.07);
+        g.gain.linearRampToValueAtTime(0, now + idx * 0.07 + 0.1);
+        o.start(now + idx * 0.07); o.stop(now + idx * 0.07 + 0.1);
+      });
+    } else if (type === 'error') {
+      osc.type = 'sawtooth'; osc.frequency.setValueAtTime(180, now);
+      osc.frequency.setValueAtTime(120, now + 0.1);
+      gain.gain.setValueAtTime(0.2, now); gain.gain.linearRampToValueAtTime(0, now + 0.22);
+      osc.start(now); osc.stop(now + 0.22);
+    }
+  } catch(e) {}
+}
+
+function setMascot(text, bg = "var(--green)") {
+  const badge = $("mascotBadge");
+  badge.textContent = text;
+  badge.style.background = bg;
+}
+
+function spawnParticles(x, y, symbols = ['⚡', '✨', '✦', '💥']) {
+  for (let i = 0; i < 7; i++) {
+    const p = document.createElement("div");
+    p.className = "fx-particle";
+    p.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    p.style.left = x + "px"; p.style.top = y + "px";
+    const angle = Math.random() * Math.PI * 2;
+    const dist = 35 + Math.random() * 55;
+    p.style.setProperty('--dx', Math.cos(angle) * dist + 'px');
+    p.style.setProperty('--dy', Math.sin(angle) * dist + 'px');
+    document.body.appendChild(p);
+    setTimeout(() => p.remove(), 650);
+  }
+}
+
+function showXpPop(amount) {
+  const pop = document.createElement("div");
+  pop.className = "xp-pop";
+  pop.textContent = `+${amount} XP!`;
+  $("modalBody").appendChild(pop);
+  setTimeout(() => pop.remove(), 800);
+}
+
+function filterCategory(cat) {
+  activeCategory = cat;
+  $("filterAll").classList.toggle("active", cat === 'all');
+  $("filterA").classList.toggle("active", cat === 'blockA');
+  $("filterB").classList.toggle("active", cat === 'blockB');
+  $("filterC").classList.toggle("active", cat === 'blockC');
+
+  if (cat === 'all') {
+    $("categoryTitle").textContent = "ПРОГРАММА МОДУЛЕЙ";
+    $("categoryBadge").textContent = "12 UNITS / DEDICATED FORMATS";
+  } else if (cat === 'blockA') {
+    $("categoryTitle").textContent = "БЛОК 19–24: ГРАММАТИЧЕСКИЕ ФОРМЫ";
+    $("categoryBadge").textContent = "5 UNITS / GRAMMAR";
+  } else if (cat === 'blockB') {
+    $("categoryTitle").textContent = "БЛОК 25–29: СЛОВООБРАЗОВАНИЕ";
+    $("categoryBadge").textContent = "3 UNITS / WORD FORMATION";
+  } else {
+    $("categoryTitle").textContent = "БЛОК 30–36 & ПРОДВИНУТЫЙ СИНТАКСИС";
+    $("categoryBadge").textContent = "4 UNITS / ADVANCED SYNTAX";
+  }
+  renderUnits();
+}
+
+function renderUnits() {
+  const container = $("unitsContainer");
+  const filtered = lessons.filter(u => activeCategory === 'all' || u.block === activeCategory);
+  
+  container.innerHTML = filtered.map((unit) => {
+    const originalIdx = lessons.indexOf(unit);
+    let badgeColor = 'var(--cyan)';
+    let blockName = 'БЛОК 19-24';
+    if (unit.block === 'blockB') { badgeColor = 'var(--pink)'; blockName = 'БЛОК 25-29'; }
+    if (unit.block === 'blockC') { badgeColor = 'var(--purple)'; blockName = 'БЛОК 30-36'; }
+
+    return `
+      <article class="unit-card">
+        <div class="flex justify-between items-center w-full">
+          <div class="unit-num">UNIT ${String(originalIdx + 1).padStart(2, '0')}</div>
+          <span class="text-xs font-mono font-bold px-2 py-0.5 border border-black shadow-sm" style="background:${badgeColor}; color:${unit.block==='blockB'?'#fff':'#000'}">${blockName}</span>
+        </div>
+        <h3>${unit.title}</h3>
+        <p>${unit.desc}</p>
+        <div class="mt-auto">
+          <div class="text-xs font-mono mb-2">КАРТОЧЕК В КОЛОДЕ: ${unit.items.length}</div>
+          <button class="acid-btn w-full" onclick="openLesson(${originalIdx})">ОТКРЫТЬ КОЛОДУ ➔</button>
+        </div>
+      </article>
+    `;
+  }).join("");
+}
+
+function openLesson(index) {
+  playSfx('pick');
+  lessonIndex = index;
+  earnedXP = 0;
+  masteredCount = 0;
+
+  currentDeck = lessons[lessonIndex].items.map((item, idx) => ({
+    ...item,
+    id: `task-${idx}-${Date.now()}`,
+    errorsCount: 0,
+    hintShown: false
+  }));
+  
+  totalModuleTasks = currentDeck.length;
+
+  $("overlay").classList.add("show");
+  $("taskArea").style.display = "block";
+  $("result").classList.remove("show");
+  $("modalLabel").textContent = lessons[lessonIndex].label;
+
+  renderCurrentCard();
+  document.body.style.overflow = "hidden";
+  setMascot("😎 READY FOR DRILL");
+}
+
+function closeLesson() {
+  playSfx('pick');
+  $("overlay").classList.remove("show");
+  document.body.style.overflow = "";
+}
+
+function updateDeckStats() {
+  $("cardProgress").textContent = `${masteredCount + 1} из ${totalModuleTasks}`;
+  $("deckRemaining").textContent = currentDeck.length;
+  $("deckMastered").textContent = `${masteredCount} / ${totalModuleTasks}`;
+}
+
+function renderCurrentCard() {
+  if (currentDeck.length === 0) {
+    finishLesson();
+    return;
+  }
+
+  updateDeckStats();
+  built = [];
+  currentTask = currentDeck[0];
+
+  const tagEl = $("taskFormatTag");
+  tagEl.textContent = currentTask.formatTag || "КОНСТРУКТОР";
+  tagEl.className = currentTask.type === "wordform" ? "task-format-tag wf" : "task-format-tag";
+
+  $("ruSentence").textContent = currentTask.ru;
+  $("status").textContent = "";
+  $("status").className = "status-msg";
+
+  if (currentTask.hintShown) {
+    $("hintBanner").classList.add("show");
+    $("hintText").innerHTML = currentTask.hint;
+  } else {
+    $("hintBanner").classList.remove("show");
+  }
+
+  const area = $("interactionArea");
+  if (currentTask.type === "wordform") {
+    renderWordFormUI(area);
+  } else {
+    renderBuilderUI(area);
+  }
+}
+
+/* Word Formation Specialized UI Renderer */
+function renderWordFormUI(area) {
+  area.innerHTML = `
+    <div class="wf-container">
+      <div class="wf-sentence-box font-serif">
+        ${getFormattedSentenceWithGap(currentTask.enGap, "")}
+      </div>
+      <div class="base-word-card">
+        <span class="base-label">⚡ ИСХОДНОЕ СЛОВО ( ROOT WORD ):</span>
+        <span class="base-word-value">${currentTask.baseWord}</span>
+      </div>
+      <div class="wf-input-wrapper">
+        <input type="text" id="wfInput" class="wf-input" placeholder="ВВЕДИТЕ ОБРАЗОВАННОЕ СЛОВО..." autocomplete="off" spellcheck="false" autofocus>
+      </div>
+      <div class="suffix-helper-bar">
+        <span class="text-xs font-bold font-mono py-1 w-full text-gray-700">БЫСТРЫЙ НАБОР АФФИКСОВ ( ДЛЯ УДОБСТВА ):</span>
+        <button class="helper-chip action-btn" onclick="applyWfHelper('root')">⚡ КОРЕНЬ (${currentTask.baseWord})</button>
+        <button class="helper-chip" onclick="applyWfHelper('suffix', 'ment')">-MENT</button>
+        <button class="helper-chip" onclick="applyWfHelper('suffix', 'tion')">-TION</button>
+        <button class="helper-chip" onclick="applyWfHelper('suffix', 'able')">-ABLE</button>
+        <button class="helper-chip" onclick="applyWfHelper('suffix', 'ness')">-NESS</button>
+        <button class="helper-chip" onclick="applyWfHelper('suffix', 'ly')">-LY</button>
+        <button class="helper-chip" onclick="applyWfHelper('suffix', 'ize')">-IZE</button>
+        <button class="helper-chip" onclick="applyWfHelper('suffix', 'ful')">-FUL</button>
+        <button class="helper-chip" onclick="applyWfHelper('suffix', 'less')">-LESS</button>
+        <button class="helper-chip" onclick="applyWfHelper('suffix', 'ance')">-ANCE</button>
+        <button class="helper-chip" onclick="applyWfHelper('suffix', 'ity')">-ITY</button>
+        <button class="helper-chip" onclick="applyWfHelper('prefix', 'un')">UN-</button>
+        <button class="helper-chip" onclick="applyWfHelper('prefix', 'im')">IM-</button>
+        <button class="helper-chip" onclick="applyWfHelper('prefix', 'dis')">DIS-</button>
+        <button class="helper-chip" onclick="applyWfHelper('prefix', 'in')">IN-</button>
+        <button class="helper-chip" onclick="applyWfHelper('prefix', 'ir')">IR-</button>
+        <button class="helper-chip" onclick="applyWfHelper('prefix', 'il')">IL-</button>
+        <button class="helper-chip" onclick="applyWfHelper('prefix', 'mis')">MIS-</button>
+        <button class="helper-chip action-btn" style="background:var(--red); color:#fff;" onclick="applyWfHelper('clear')">✕ СБРОС</button>
+      </div>
+    </div>
+  `;
+
+  const inputEl = $("wfInput");
+  if (inputEl) {
+    inputEl.focus();
+    inputEl.addEventListener("input", onWfInputChange);
+    inputEl.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        checkAnswer();
+      }
+    });
+  }
+}
+
+function getFormattedSentenceWithGap(enGap, userVal) {
+  const displayVal = userVal ? userVal.toUpperCase() : "________";
+  return enGap.replace("_____", `<span class="wf-gap-highlight" id="wfGapText">${displayVal}</span>`);
+}
+
+function onWfInputChange() {
+  const inputEl = $("wfInput");
+  const gapEl = $("wfGapText");
+  if (inputEl && gapEl) {
+    const val = inputEl.value.trim();
+    gapEl.textContent = val ? val.toUpperCase() : "________";
+  }
+}
+
+function applyWfHelper(action, val = '') {
+  playSfx('drop');
+  const inputEl = $("wfInput");
+  if (!inputEl) return;
+
+  if (action === 'clear') {
+    inputEl.value = '';
+  } else if (action === 'root') {
+    inputEl.value = currentTask.baseWord.toLowerCase();
+  } else if (action === 'prefix') {
+    const current = inputEl.value.trim() || currentTask.baseWord.toLowerCase();
+    if (!current.startsWith(val)) {
+      inputEl.value = val + current;
+    }
+  } else if (action === 'suffix') {
+    let current = inputEl.value.trim();
+    if (!current) current = currentTask.baseWord.toLowerCase();
+    inputEl.value = current + val;
+  }
+  
+  onWfInputChange();
+  inputEl.focus();
+}
+
+/* Syntax Builder UI Renderer */
+function renderBuilderUI(area) {
+  area.innerHTML = `
+    <div class="drop-zone" id="dropZone">
+      <div class="drop-placeholder">[ ПЕРЕМЕСТИТЕ ИЛИ КЛИКНИТЕ ПО ТОКЕНАМ ]</div>
+    </div>
+    <div class="bank-header-row">
+      <div class="bank-label">ДОСТУПНЫЕ ТОКЕНЫ:</div>
+      <button class="reset-btn text-xs font-mono bg-white border border-black p-1 shadow-sm" onclick="resetPlacedTokens()">↺ СБРОСИТЬ</button>
+    </div>
+    <div class="word-bank" id="wordBank"></div>
+  `;
+
+  const words = currentTask.bank.map((word, i) => ({ word, id: currentTask.id + "-token-" + i }));
+  for (let i = words.length - 1; i > 0; i--) { 
+    const j = Math.floor(Math.random() * (i + 1)); 
+    [words[i], words[j]] = [words[j], words[i]]; 
+  }
+
+  $("wordBank").innerHTML = words.map(x => `<button class="word-chip" data-id="${x.id}" data-word="${x.word}">${x.word}</button>`).join("");
+  attachTokenEvents();
+}
+
+function attachTokenEvents() {
+  document.querySelectorAll(".word-chip").forEach(el => {
+    el.addEventListener("pointerdown", startDrag, { passive: false });
+    el.addEventListener("click", handleWordClick);
+  });
+  const dz = $("dropZone");
+  if (dz) {
+    dz.addEventListener("pointerenter", () => dz.classList.add("drag-over"));
+    dz.addEventListener("pointerleave", () => dz.classList.remove("drag-over"));
+  }
+}
+
+function handleWordClick(e) {
+  if (dragState && dragState.wasDragged) return;
+  const el = e.currentTarget;
+  if (!el.classList.contains("placed")) {
+    addWordToZone(el, e.clientX, e.clientY);
+  }
+}
+
+function startDrag(e) {
+  if (e.button !== undefined && e.button !== 0) return;
+  e.preventDefault();
+  playSfx('pick');
+  const el = e.currentTarget;
+  const r = el.getBoundingClientRect();
+
+  dragState = {
+    el, id: el.dataset.id, word: el.dataset.word,
+    ghost: null, startX: e.clientX, startY: e.clientY, wasDragged: false
+  };
+
+  el.classList.add("dragging");
+  
+  const ghost = el.cloneNode(true);
+  ghost.classList.add("drag-ghost");
+  ghost.style.width = r.width + "px";
+  ghost.style.left = e.clientX + "px";
+  ghost.style.top = e.clientY + "px";
+  document.body.appendChild(ghost);
+  dragState.ghost = ghost;
+
+  document.addEventListener("pointermove", moveDrag, { passive: false });
+  document.addEventListener("pointerup", endDrag, { once: true });
+  document.addEventListener("pointercancel", endDrag, { once: true });
+}
+
+function moveDrag(e) {
+  if (!dragState) return;
+  e.preventDefault();
+  if (Math.hypot(e.clientX - dragState.startX, e.clientY - dragState.startY) > 5) {
+    dragState.wasDragged = true;
+  }
+  dragState.ghost.style.left = e.clientX + "px";
+  dragState.ghost.style.top = e.clientY + "px";
+
+  const zone = $("dropZone");
+  if (zone) {
+    const r = zone.getBoundingClientRect();
+    const inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+    zone.classList.toggle("drag-over", inside);
+  }
+}
+
+function endDrag(e) {
+  if (!dragState) return;
+  const state = dragState; dragState = null;
+  document.removeEventListener("pointermove", moveDrag);
+  state.ghost?.remove(); state.el.classList.remove("dragging");
+
+  const zone = $("dropZone");
+  if (zone) {
+    const r = zone.getBoundingClientRect();
+    const inside = e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+    zone.classList.remove("drag-over");
+
+    if (inside && state.wasDragged) {
+      addWordToZone(state.el, e.clientX, e.clientY);
+    }
+  }
+}
+
+function addWordToZone(el, posX, posY) {
+  if (el.classList.contains("placed")) return;
+  playSfx('drop');
+  el.classList.add("placed");
+  el.remove();
+
+  const chip = document.createElement("button");
+  chip.className = "word-chip placed";
+  chip.textContent = el.dataset.word;
+  chip.dataset.word = el.dataset.word;
+  chip.dataset.source = el.dataset.id;
+  chip.addEventListener("click", (e) => removePlacedToken(chip, e));
+
+  const ph = $("dropZone").querySelector(".drop-placeholder");
+  if (ph) ph.remove();
+  $("dropZone").appendChild(chip);
+
+  if (posX && posY) spawnParticles(posX, posY, ['✨', '❇️']);
+  built.push({ word: el.dataset.word, id: el.dataset.id });
+}
+
+function removePlacedToken(chip, e) {
+  playSfx('drop');
+  const word = chip.dataset.word;
+  const id = chip.dataset.source;
+
+  const bank = $("wordBank");
+  const original = document.createElement("button");
+  original.className = "word-chip";
+  original.dataset.id = id; original.dataset.word = word; original.textContent = word;
+  bank.appendChild(original);
+
+  chip.remove();
+  built = built.filter(x => x.id !== id);
+
+  if (!$("dropZone").children.length) {
+    $("dropZone").innerHTML = '<div class="drop-placeholder">[ ПЕРЕМЕСТИТЕ ИЛИ КЛИКНИТЕ ПО ТОКЕНАМ ]</div>';
+  }
+
+  original.addEventListener("pointerdown", startDrag, { passive: false });
+  original.addEventListener("click", handleWordClick);
+}
+
+function resetPlacedTokens() {
+  if (built.length === 0) return;
+  playSfx('drop');
+  renderCurrentCard();
+}
+
+function manualTakeHint() {
+  playSfx('hint');
+  currentTask.hintShown = true;
+  $("hintBanner").classList.add("show");
+  $("hintText").innerHTML = currentTask.hint;
+  setMascot("💡 ПОДСКАЗКА ОТКРЫТА", "var(--cyan)");
+}
+
+function checkAnswer() {
+  let isCorrect = false;
+
+  if (currentTask.type === "wordform") {
+    const inputEl = $("wfInput");
+    const userAns = inputEl ? inputEl.value.trim().toLowerCase() : "";
+    const targetAns = currentTask.answer.trim().toLowerCase();
+    isCorrect = (userAns === targetAns);
+  } else {
+    const currentWords = built.map(x => x.word);
+    isCorrect = currentWords.length === currentTask.answer.length && currentWords.every((v, i) => v === currentTask.answer[i]);
+  }
+
+  if (isCorrect) {
+    playSfx('success');
+    setMascot("🔥 ИДЕАЛЬНО! MASTERED", "var(--green)");
+    const card = $("activeCard");
+    card.classList.add("mastered-anim");
+    
+    setTimeout(() => {
+      let xpGain = 10;
+      if (currentTask.errorsCount === 0 && !currentTask.hintShown) xpGain = 50;
+      else if (currentTask.errorsCount === 0) xpGain = 20;
+      earnedXP += xpGain;
+      $("xp").textContent = parseInt($("xp").textContent) + xpGain;
+      showXpPop(xpGain);
+      
+      currentDeck.shift();
+      masteredCount++;
+      card.classList.remove("mastered-anim");
+      renderCurrentCard();
+    }, 600);
+    
+  } else {
+    playSfx('error');
+    currentTask.errorsCount++;
+    setMascot("❌ ОШИБКА! В КОНЕЦ КОЛОДЫ", "var(--red)");
+    $("status").textContent = "НЕВЕРНО!";
+    $("status").className = "status-msg bad";
+    
+    const card = $("activeCard");
+    card.classList.add("fly-back-anim");
+    setTimeout(() => {
+      currentDeck.shift();
+      currentDeck.push(currentTask);
+      card.classList.remove("fly-back-anim");
+      renderCurrentCard();
+    }, 700);
+  }
+}
+
+function finishLesson() {
+  playSfx('success');
+  $("taskArea").style.display = "none";
+  const res = $("result");
+  res.classList.add("show");
+  $("resultText").textContent = `Пройдено заданий: ${totalModuleTasks}`;
+  $("resultXp").textContent = `+${earnedXP} XP`;
+  setMascot("🏆 МОДУЛЬ ЗАКРЫТ", "var(--pink)");
+}
+
+// Первоначальный рендеринг
+renderUnits();
+</script>
+</body>
+</html>
